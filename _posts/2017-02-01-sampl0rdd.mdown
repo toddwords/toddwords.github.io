@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "sampl0rd"
+description: A web-based ten-track sampler/looper that lets you record and loop sounds at different rates based on your mouse position"
+img: sampl0rd.gif
+categories: [one, two]
+color: "80,80,80"
+author: todd
+xLink: "/sampl0rd"
+---

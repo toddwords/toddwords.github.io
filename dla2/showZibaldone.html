@@ -1,0 +1,21 @@
+<script>
+	Array.prototype.choice = function() {
+	  var i = Math.floor(Math.random()*this.length);
+	  return this[i];
+	}
+	var urls = [
+		"https://www.evernote.com/pub/isaiah_brand/zibaldone",
+		"https://www.evernote.com/pub/jiajie_chen/zibaldone",
+		"https://www.evernote.com/pub/aubrey_deronde/zibaldone",
+		"https://www.evernote.com/pub/joengelman/zibaldone",
+		"https://www.evernote.com/pub/ishmaelgunfist/zibaldone",
+		"https://www.evernote.com/pub/niamo3/zibaldone",
+		"https://www.evernote.com/pub/john_c_kelly/zibaldone",
+		"https://www.evernote.com/pub/harry_kettelberger/dla",
+		"https://www.evernote.com/pub/william_c_thompson/zibaldone",
+		"https://www.evernote.com/pub/alexis_viera/zibaldone]"]
+		function openUrl(){
+			window.open(urls.choice())						
+		}
+</script>
+<button onclick="openUrl()" style="font-size:8em;margin:100px 20%; width:60%">Show Random Zibaldone</button>

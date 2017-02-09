@@ -1,0 +1,60 @@
+---
+layout: default
+---
+<style>
+html { 
+  background: url(https://img.itch.io/aW1hZ2UvMTAwNjgzLzQ3NDIwNS5naWY=/original/QWAAs%2B.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
+
+  <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "percentPosition": true, "columnWidth": ".grid-sizer"}'>
+  <div class="grid-sizer"></div>
+       {% assign cards = site.posts | where_exp: "post", "post.evergreen < 10" %}
+       {% for post in cards %}
+        <div class="grid-item colorEG{{forloop.index}}">
+            <style>.colorEG{{forloop.index}}{background-color:rgba({% if post.color %}{{post.color}}{% else %}40,50,200{% endif %},0.9) }</style>
+         {% if post.img %}
+        <a href="{% if post.xLink %}{{post.xLink}}"target="_blank{% else %}{{post.url | prepend: site.baseurl}}{% endif %}">
+          <img src={{ "/images/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}"></a>
+          {% endif %}
+          <div class="container">
+        <a href="{% if post.xLink %}{{post.xLink}}{% else %}{{post.url | prepend: site.baseurl}}{% endif %}">
+            <h4>{{post.title}}</h4></a>
+            <p>{{post.description}}</p>
+            
+        
+        </div>   
+    </div>
+   {% endfor %}
+   {% assign cards = site.posts | where_exp: "post", "post.evergreen > 10" %}
+       {% for post in cards %}
+        <div class="grid-item color{{forloop.index}}">
+            <style>.color{{forloop.index}}{background-color:rgba({% if post.color %}{{post.color}}{% else %}40,50,200{% endif %},0.9) }</style>
+         {% if post.img %}
+        <a href="{% if post.xLink %}{{post.xLink}}"target="_blank{% else %}{{post.url | prepend: site.baseurl}}{% endif %}">
+          <img src={{ "/images/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}"></a>
+          {% endif %}
+          <div class="container">
+        <a href="{% if post.xLink %}{{post.xLink}}{% else %}{{post.url | prepend: site.baseurl}}{% endif %}">
+            <h4>{{post.title}}</h4></a>
+            <p>{{post.description}}</p>
+            
+        
+        </div>   
+    </div>
+   {% endfor %}
+   </div>
+   <script src={{ "/js/jquery.min.js" | prepend: site.baseurl }}></script>
+ <script src={{ "/js/masonry.pkgd.min.js" | prepend: site.baseurl }}></script>
+ <script src={{ "/js/imagesloaded.pkgd.min.js" | prepend: site.baseurl }}></script>
+ <script>
+var $grid = $('.grid').masonry({});
+$grid.imagesLoaded().progress( function() {
+  $grid.masonry('layout');
+});
+</script>
+

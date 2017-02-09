@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0032)http://nickm.com/poems/lede.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<style type="text/css">
+/* <![CDATA[ */
+body {
+ background: #fff;
+ color: #000;
+ margin: 0 0 0 24pt;
+ font-family: Optima, sans-serif;
+ font-size: 13pt;
+}
+a {
+ color: #117;
+ text-decoration: none;
+}
+/* ]]> */
+</style>
+<script type="text/javascript">
+var t = 0;
+var Headline_1 = ["3000 Dead;", "Over 1500 Lives Lost;", "Greatest Crash in History;", "War!", "First Atomic Bomb Dropped;", "Hitler Dead;", "The War In Europe Is Ended!", "Kennedy Dead;", "Shot To Death;", "'Eagle Has Landed';", "Nixon Resigns;", "Saigon Surrenders To Vietcong;","John Lennon Slain;", "Mandela Freed!", "U.S. Attacked;", "Obama;", "Justice Has Been Done;"];
+var Headline_2 = ["$300,000 Lost", "Struck Against Iceberg", "Prices Tumble Like An Avalanche", "Six Known Dead, 21 Injured", "Missile Is Equal To 20,000 Tons Of TNT", "New Fuehrer Continues Fight", "Surrender Is Unconditional", "Sniper's Bullet Kills President", "Gunned Down In Memphis", "Astronauts Land", "New President At Noon", "Withdrawal Ends Role Of U.S.", "Beatle Is Shot Down", "Day To Be Remembered", "Hijacked Jets Hit", "Heavy Turnout Rate In Election", "U.S. Forces Kill Terrorist Leader"];
+var Sentence_Subject = ["San Francisco", "Giant Liner Titanic", "Wall Street", "Oahu", "Hiroshima", "Third Reich", "Victory", "Car In Dallas", "Martin King", "Moon", "Ford", "Force","Lennon", "Leader", "Twin Towers And Pentagon", "Racial Barrier", "Osama bin Laden"];
+var Verb = ["Is", "Has", "Has Been", "Was", "To Be"];
+var Adjective = ["Obliterated", "Sunk", "In Panic", "Bombed", "Ruined", "Maintained", "Proclaimed", "Shot", "Killed", "Reached", "Inaugurated", "Removed", "Murdered", "Freed", "Hit", "Fallen", "Slain"];
+function rand_range(max) {
+    "use strict";
+    return Math.floor(Math.random() * (max + 1));
+}
+function fresh(array) {
+    "use strict";
+    var index = rand_range(array.length - 2) + 1, selection = array[index];
+    array[index] = array[0];
+    array[0] = selection;
+    return selection;
+}
+function story() {
+    "use strict";
+    var last, lede, main = document.getElementById('main');
+    if (t <= 0) {
+        t += 1;
+    } else {
+        main.removeChild(document.getElementById('main').firstChild);
+    }
+    last = document.createElement('div');
+    last.appendChild(document.createElement('br'));
+    lede = fresh(Headline_1) + " " + fresh(Headline_2) + "; " + fresh(Sentence_Subject) + " " + fresh(Verb) + " " + fresh(Adjective) + "!";
+    last.appendChild(document.createTextNode(lede));
+    main.appendChild(last);
+}
+function produce_stories() {
+    "use strict";
+    story();
+    setInterval(story, 2000);
+}</script>
+  <title>Lede</title>
+</head>
+<body onload="produce_stories();">
+<div style="float:right; background:#562323; margin-left:100px; border-left:thick #000 solid; border-bottom:thin #000 solid; padding:20px;">
+<div><br>Talking Points<br>Alexis V.</a></div>
+</div>
+<div id="main"><div><br>3000 Dead; $300,000 Lost; San Francisco Is Obliterated!</div><div><br>Over 1500 Lives Lost; Struck Against Iceberg; Giant Liner Titanic Has Sunk!</div><div><br>Greatest Crash In History; Prices Tumble Like An Avalanche; Wall Street Is In Panic!</div><div><br>War! Six Known Dead, 21 Injured; Oahu Has Been Bombed!</div><div><br>First Atomic Bomb Dropped; Missile Is Equal To 20,000 Tons Of TNT; Hiroshima Is Ruined!</div><div><br>Hitler Dead; New Fuehrer Continues Fight; Third Reich Is Maintained!</div><div><br>The War In Europe Is Ended! Surrender Is Unconditional; Victory Has Been Proclaimed!</div><div><br>Kennedy Dead; Sniper's Bullet Kills President; Car In Dallas Was Shot!</div><div><br>Shot To Death; Gunned Down In Memphis; Martin King Has Been Killed!</div><div><br>'Eagle Has Landed'; Astronauts Land; Moon Has Been Reached!</div><div><br>Nixon Resigns; New President At Noon; Ford To Be Inaugurated!</div><div><br>Saigon Surrenders To Vietcong; Withdrawal Ends Role Of U.S.; Force To Be Removed!</div><div><br>John Lennon Slain; Beatle Is Shot Down; Lennon Was Murdered!</div></div>
+
+
+
+
+</body></html>

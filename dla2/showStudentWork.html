@@ -1,0 +1,19 @@
+<script>
+	Array.prototype.choice = function() {
+	  var i = Math.floor(Math.random()*this.length);
+	  return this[i];
+	}
+	var urls = [
+"https://izzybrand.github.io/week6-sound/self.html",
+"http://jiajie-chen.com/litr0210d/week-6/",
+"https://aderonde.github.io/week6-sound/messagebottle.html",
+"https://joengelm.github.io/projects/sound/uhh.html",
+"http://wcthompson.github.io/dla/week6/index.html",
+"https://wathoren.github.io/index4.htm",
+"http://alexiskeila.github.io/week6-sound/gameofgods"
+]
+	function openUrl(){
+		window.open(urls.choice())
+	}
+</script>
+<button onclick="openUrl()" style="font-size:8em;margin:100px 20%; width:60%">Show Student Work</button>

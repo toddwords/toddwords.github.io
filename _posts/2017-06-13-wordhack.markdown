@@ -1,0 +1,48 @@
+---
+layout: post
+title:  "WordHack"
+description: A monthly series of talks and performances exploring the intersection of language and technology at Babycastles in NYC that I founded and host.
+date:   2016-12-13 10:51:47 +0530
+img: wordhack.jpg
+categories: [one, two]
+color: "0,100,120"
+author: todd
+evergreen: 2
+---
+
+I founded WordHack in the summer of 2014 to create a communal space where people making language-based digital projects could share their work and meet each other. The format consists of 3-4 presenters giving short talks / performances (~15 mins) and an **Open Projector** where anyone from the audience can sign up to present their work for 5 minutes or less. 
+
+WordHack happens in NYC on the third thursday of every month at [Babycastles](http://babycastles.com) (137 W 14th St 2nd fl. I host the series and curate it alongside [Claire Donato](http://somanytumbleweeds.com) 
+
+PAST WORDHACKS
+- [1/19/17 Feat. Nicole He, Angie Waller, Ilana Harris-Babou and Public Science](https://www.facebook.com/events/1765460560441734/)
+- [1/7/17 WordHack West in LA Feat. Lauren McCarthy, Tim Schwartz and Tender Claws](https://www.facebook.com/events/170497000095615/)
+- [12/15/16 Feat. Kelli Anderson, Ryann Slauson, Ricky Morales and Todd Anderson](https://www.facebook.com/events/354082391612205/)
+- [11/17/16 Feat. Joshua Kopstein, Andrew Badr and Cecilia D'Anastasio](https://www.facebook.com/events/1348210528523091/)
+- [10/20/16 Feat. Abe Avnisan, Vivian Charlesworth, Edek Sher and Nandi Loaf](https://www.facebook.com/events/196256427471642/)
+- [9/15/16 Feat. Alejandro Miguel Jusino Crawford, Sal Randolph, Lam Thuy Vo and Kevin Roark Jr.](https://www.facebook.com/events/1676029872716245/)
+- [8/18/16 Feat. Tega Brain, Kate Durbin and Mimi Onuoha](https://www.facebook.com/events/1571932603111131/)
+- [6/16/16 Feat. Ben Grosser, Carl Ferrero, Elizaveta Shneyderman, Ansh Patel and Chris Rodley](https://www.facebook.com/events/137936156615456/)
+- [5/19/16 Feat. Clement Valla, Katie Rose Pipkin, Peter Bussigel and Cat Frazier](https://www.facebook.com/events/1178168905550699/)
+- [4/21/16 Feat. Judd Morrissey, Victoria Sobel & Casey Gollan, Nuclear Fishin' and Jónó Mí Ló](https://www.facebook.com/events/1724929464415542/)
+- [3/17/16 Feat. Christopher Clary, Paul Legault and Masha Tupitsyn](https://www.facebook.com/events/177642639283231/)
+- [2/18/16 Feat. Steve Lambert, HUMANBEST, Kristin Hayter and Cassie Tarakajian](https://www.facebook.com/events/174740289562055/)
+- [1/21/16 Feat. Sam Lavigne, Stephanie Rothenberg, Christian Hawkey and Cat Tyc](https://www.facebook.com/events/1647939085471751/)
+- [12/17/15 Feat. Daniel Kolitz, Mimi Cabell, Daniel Temkin and Jeremy Bushnell](https://www.facebook.com/events/198661763808371/)
+- [11/19/15 Feat. Jonathan Basile, Jim Brown & Michael Russo, Flourish Klink and Jason Huff](https://www.facebook.com/events/701084330022525/)
+- [10/15/15 Feat. Christopher Funkhouser, Laura Warman, Álvaro Seiça and Amelia Winger-Bearskin](https://www.facebook.com/events/995753600489468/)
+- [9/17/15 Feat. Darren Angle, Clara Fernandez-Vara and Tim Szetela](https://www.facebook.com/events/175393149460645/)
+- [8/20/15 Feat. Reed Gaines, Jane Friedhoff, Kelly Donahue and Todd Anderson](https://www.facebook.com/events/1613953192206065/)
+- [7/16/15 Feat. Ranjit Bhatnagar, Andrew Badr, Claire Kwong and Thomas Storey](https://www.facebook.com/events/855508304542033/)
+- [6/11/15 Feat. Steve Roggenbuck, Zach Gage, Angela Ferraiolo and Anastasis Germanidis](https://www.facebook.com/events/1619455494936880/)
+- [3/19/15 Feat. Stephanie Strickland & Ian Hatcher, Francesca Capone and Case Study](https://www.facebook.com/events/745307942250509/)
+- [2/20/15 Feat. Alan Sondheim and Darius Kazemi](https://www.facebook.com/events/1537176459865170/)
+- [1/15/15 Feat. Nick Montfort, Allison Parrish, Sarah Groff-Palermo and Ross Goodwin](https://www.facebook.com/events/1537176459865170/)
+- [12/18/14 Feat. John Cayley, Special America, Dominic Pettman and Merritt Symes](https://www.facebook.com/events/406156156201865/)
+- [11/20/14 Feat. Ian Hatcher, Stephanie Boluk & Patrick LeMieux, Grayson Earle and Kevin Carter](https://www.facebook.com/events/1546474875585758/)
+- [10/19/14 David Jhave Johnston, Archiverse (Jeff T. Johnson & Andrew Klobucar), and Nina Freeman & Jenny Jiao Hsia](https://www.facebook.com/events/708836872538337/)
+- [9/25/14 Feat. Bubblyfish, Hannah Davis, Lee Tusman and Gabriel Loeb](https://www.facebook.com/events/1566033796958481/)
+- [8/22/14 Feat. Nikola Tosic, Miracle Jones, Aiden Arata, Andrew Klobucar and Orion Martin](https://www.facebook.com/events/755620237833151/)
+- [7/11/14 Feat. Carla Gannis, Justin Petropoulos, Jonathan Wohl, Andy Dayton, Todd Anderson, Jonah Galeota-Sprung and Derek Baron](https://www.facebook.com/events/667940996622631/)
+
+

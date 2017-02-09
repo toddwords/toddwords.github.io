@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Gentle Leader & WebWriter Live @ Vernacular Spectacular"
+description: Two performances at RISD's Gelman Gallery. One with my band Gentle Leader, one with my experimental web graffiti extension 
+color: "156,32,190"
+img: webwriter.PNG
+---
+[Vernacular Spectacular](https://events.risd.edu/event/vernacular_spectacular#.WJzskjsrJ9B) was an exhibition of vernacular and commercial-themed art curated for RISD's Gelman Gallery Cem Eskinazi and Drew Litowitz.
+
+For the opening of the show on 12/1/16 I performed as part of [Gentle Leader](http://toddwords.com/gentle-leader) and did a solo piece using my experimental web graffiti chrome extension, WebWriter. Videos below:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FTwFlMG1g90" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VCF-M8r3iik" frameborder="0" allowfullscreen></iframe>

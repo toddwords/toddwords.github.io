@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Buzzard"
+description: WarioWare-style game about eating Bugles and committing check fraud 
+categories: jekyll update
+img: buzzard.gif
+categories: game
+color: "40,56,62"
+---
+Buzzard is the video game companion to the [Joel Potrykus movie](https://en.wikipedia.org/wiki/Buzzard_(film)) of the same name, made after a successful [Kickstarter campaign](https://www.kickstarter.com/projects/potrykus/buzzard-the-video-game). It is a collection of over 20 rapid-fire action minigames depicting various scenes from the movie with everything from committing check fraud to eating bugles off a treadmill. 
+
+The game was made in Unity by a team of five from [Babycastles](http://babycastles.com) including myself, Ben Johnson, Stephen Clark, Adelle Lin and Ian Clyde.
+
+See a writeup of the game in [KillScreen](https://killscreen.com/articles/in-buzzard-living-is-hell/)!

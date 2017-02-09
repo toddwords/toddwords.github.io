@@ -1,0 +1,102 @@
+<script src="../../lib/mousetrap.min.js"></script>
+<script src="../../lib/jquery-1.11.1.min.js"></script>
+<audio id="pokebattle" src="pokebattle.mp3" preload="auto" loop></audio>
+<audio id="farm" src="farm.mp3" preload="auto" loop></audio>
+<audio id="lab" src="lab.mp3" preload="auto" loop></audio>
+<audio id="catacombs" src="catacombs.mp3" preload="auto" loop></audio>
+<audio id="farm2" src="farm2.mp3" preload="auto" loop></audio>
+<audio id="goat1" src="goat1.mp3" preload="auto"></audio>
+<style>
+	html { 
+	  background: url() no-repeat center center fixed; 
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	}
+	h1 {
+		font-family: "Papyrus"
+		margin-top:10%;
+		text-align: center;
+		text-shadow: #F00 2px 2px;
+		font-size:3em;
+	}
+</style>
+<script>
+Mousetrap.bind("\\", function(){
+	playSound2("pokebattle")
+})
+Mousetrap.bind("f", function(){
+	$('html').css("background-image", "url(farmhouse.jpg)")
+	playSound2("farm")
+})
+Mousetrap.bind("b", function(){
+	$('html').css("background-image", "url(beetfarm.jpg)")
+	playSound2("farm2")
+})
+Mousetrap.bind("l", function(){
+	$('html').css("background-image", "url(alchemistlab.jpg)")
+	playSound2("lab")
+})
+Mousetrap.bind("c", function(){
+	$('html').css("background-image", "url(cemetary.jpg)")
+	playSound2("catacombs")
+})
+Mousetrap.bind("g", function(){
+	playSound("goat1")
+	placeRandomImage("goat1.png")
+	setTimeout(function(){$('img').remove()}, 4000)
+})
+Mousetrap.bind("p", function(){
+	$('h1').html("This land's new masters make their mark four-fold.<br>Upon great Hillsfar, cruel and old<br>Hurry now and heed the call.<br>But choose wisely you cannot stop them all.")
+})
+Mousetrap.bind("m", function(){
+	$('html').css("background-image", "url(map.png)")
+})
+
+Mousetrap.bind("backspace", function(){
+	$('h1').html("")
+	playSound2("")
+})
+function playSound (id) {
+    sound = $("#" + id)[0]
+    if (sound.ended){sound.currentTime = 0};
+    if (sound.currentTime > 0){
+        sound.currentTime = 0
+    } else {
+        sound.play()
+    }
+}
+var playSound2 = function(id) {
+    $(".played").each(function(){
+        this.pause();
+        this.currentTime = 0
+    }); 
+    sound = $("#" + id).addClass("played")[0]
+    if (sound.ended){sound.currentTime = 0};
+    if (sound.currentTime > 0){
+        sound.currentTime = 0
+    } else {
+        sound.play()
+    }
+
+}
+var z = 0;
+function placeRandomImage(image){
+		var x = getRandomInt(0,80)
+		var y = getRandomInt(0,85)
+		//turns x and y from numbers into text
+		x = x.toString() + "%"
+		y = y.toString() + "%"
+		//the code below will remove all of the chosen element, in this case svg, and put in a new one. 
+		//dont be too concerned with the svg itself
+		$('body').append('<img width="400" src="'+image+'" style="position: absolute; left:'+x+'; top:'+y+'; z-index:'+z+'">')
+		z = z+1;
+		//you could also just move an existing SVG round with something like
+		//$('img').css({left: x, top: y})
+}
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+</script>
+<h1></h1>

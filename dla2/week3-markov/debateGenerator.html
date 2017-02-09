@@ -1,0 +1,36 @@
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<script src="../lib/markov.js"></script>
+<script>
+var trumpGen = new MarkovGeneratorWord(2,50)
+var clintonGen = new MarkovGeneratorWord(2,50)
+var holtGen = new MarkovGeneratorWord(2,25)
+$.get("trump.txt", function(text) {
+     trumpGen.feed(text);
+});
+$.get("clinton.txt", function(text) {
+     clintonGen.feed(text);
+});
+$.get("holt.txt", function(text) {
+     holtGen.feed(text);
+});
+
+function generate(){
+	var holtSays = holtGen.generate()
+	$('body').append("<p><b>Holt: </b>"+holtSays+"</p>")
+	var trumpSays = trumpGen.generate()
+	$('body').append("<p><b>Trump: </b>"+trumpSays+"</p>")	
+	var clintonSays = clintonGen.generate()
+	clintonSays = clintonSays.slice(0,getRandInt(0,clintonSays.length))+"--"
+	$('body').append("<p><b>Clinton: </b>"+clintonSays+"</p>")
+	var trumpSays = trumpGen.generate()
+	trumpSays = trumpSays.slice(0,getRandInt(0,trumpSays.length))+"--"
+	$('body').append("<p><b>Trump: </b>"+trumpSays+"</p>")	
+	var clintonSays = clintonGen.generate()
+	$('body').append("<p><b>Clinton: </b>"+clintonSays+"</p>")
+
+}
+function getRandInt(min,max){
+	return Math.floor(Math.random() * (max+1-min)) + min 
+}
+</script>
+<button onclick="generate()">Generate</button>

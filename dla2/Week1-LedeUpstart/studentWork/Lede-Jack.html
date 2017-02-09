@@ -1,0 +1,67 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style type="text/css">
+/* <![CDATA[ */
+body {
+ background: #fff;
+ color: #000;
+ margin: 0 0 0 24pt;
+ font-family: Optima, sans-serif;
+ font-size: 13pt;
+}
+a {
+ color: #117;
+ text-decoration: none;
+}
+/* ]]> */
+</style>
+<script type="text/javascript">
+var t = 0;
+var neg_descriptor = ["a foolish", "a arrogant", "a prideful", "a careless", "a cowardly", "a cruel", "a deceitful", "a greedy", "a gullible", "a jealous", "a selfish"];
+var villagers = ["men", "women", "citizens", "elders", "children", "folk"];
+var people_descriptor = ["wise", "good", "wicked", "poor", "cruel", "just", "honest"];
+var place_name = ["Wales", "London", "Glasgow", "Dublin", "Madrid", "Rome", "Florence", "Frankfurt", "Cologne", "Lyon", "Barcelona", "Milan"];
+var role = ["man", "woman"];
+var action1 = ["becomes", "befriends", "robs", "protects", "sacrifices", "betrays", "judges", "forgives", "kills", "fights", "rejects", "marries", "hurts", "forgets"];
+var noun1 = ["themself", "a theif", "an enemy", "their son", "their daughter", "a neighbor", "a beggar", "an adulterer", "a sinner", "an ally", "an animal", "a child"];
+var preposition = ["before", "after", "while", "instead of"];
+var place_type = ["town", "village", "city", "outpost"];
+var direction = ["north", "south", "east", "west"];
+var place_adjective = ["small", "old", "tiny", "poor"];
+function rand_range(max) {
+    "use strict";
+    return Math.floor(Math.random() * (max + 1));
+}
+function fresh(array) {
+    "use strict";
+    var index = rand_range(array.length - 2) + 1, selection = array[index];
+    array[index] = array[0];
+    array[0] = selection;
+    return selection;
+}
+function story() {
+    "use strict";
+    var last, lede, main = document.getElementById('main');
+    if (t <= 12) {
+        t += 1;
+    } else {
+        main.removeChild(document.getElementById('main').firstChild);
+    }
+    last = document.createElement('div');
+    last.appendChild(document.createElement('br'));
+    lede = "In a " + fresh(place_adjective) + " " + fresh(place_type) + " " + fresh(direction) + " of " + fresh(place_name) + ", the " + fresh(people_descriptor) + " " + fresh(villagers) + " have a saying: " + "\"Only " + fresh(neg_descriptor) + " " + fresh(role) + " " + fresh(action1) + " " + fresh(noun1) + ".\""
+    last.appendChild(document.createTextNode(lede));
+    main.appendChild(last);
+}
+function produce_stories() {
+    "use strict";
+    story();
+    setInterval(story, 3500);
+}</script>
+  <title>Sayings</title>
+</head>
+<body onload="produce_stories();">
+<div id="main"></div>
+</body>
+</html>

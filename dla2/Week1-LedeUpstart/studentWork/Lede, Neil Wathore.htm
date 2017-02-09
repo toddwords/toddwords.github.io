@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style type="text/css">
+/* <![CDATA[ */
+body {
+ background: #000;
+ color: #fff;
+ margin: 100 100 100 100pt;
+ font-family: Optima, sans-serif;
+ font-size: 13pt;
+}
+a {
+ color: #117;
+ text-decoration: none;
+}
+/* ]]> */
+
+</style>
+<script type="text/javascript">
+var t = 0;
+var quote = ["It's the simple things in life that are the most extraordinary; only wise men are able to understand them.", "When someone sees the same people every day, they wind up becoming a part of that person's life. And then they want the person to change. If someone isn't what others want them to be, the others become angry. Everyone seems to have a clear idea of how other people should lead their lives, but none about his or her own.", "The world's greatest lie: at a certain point in our lives, we lose control of what's happening to us, and our lives become controlled by fate.", "It's not what enters men's mouth that's evil. It's what comes out of their mouth that is.", "When one goes in search of the honey, they must expect to be stung by a couple of bees.", "The wind blows hardest at the top of the mountain.", "How you climb the mountain is more important than reaching the top.", "You could be the biggest brightest avocado in the world, but there's always some fucker who doesn't like avocados.", "Feeling pain is proof that you're human.", "Ask yourself whether you are happy and you will immediately cease to be.", "Now is the envy of all the dead.", "Change is the only constant.", "To get something you never had, you have to do something you've never done.", "Stars can't shine without darkness.", "The biggest risk is never taking any.", "The man who knows how will always have a job. The man who also knows why will always be his boss.", "I have to....make up an excuse to leave.", "People are rewarded in public for what they practiced for years in private."];
+
+function rand_range(max) {
+    "use strict";
+    return Math.floor(Math.random() * (max + 1));
+}
+function fresh(array) {
+    "use strict";
+    var index = rand_range(array.length - 2) + 1, selection = array[index];
+    array[index] = array[0];
+    array[0] = selection;
+    return selection;
+}
+function story() {
+    "use strict";
+    var last, lede, main = document.getElementById('main');
+    if (t <= 24) {
+        t += 1;
+    } else {
+        main.removeChild(document.getElementById('main').firstChild);
+    }
+    last = document.createElement('div');
+    last.appendChild(document.createElement('br'));
+    lede = fresh(quote);
+    last.appendChild(document.createTextNode(lede));
+    main.appendChild(last);
+}
+function produce_stories() {
+    "use strict";
+    story();
+    setInterval(story, 3500);
+}</script>
+  <title>Lede</title>
+</head>
+<body onload="produce_stories();">
+<div style="float:right; background:#999; margin-left:6px; border-left:thin #000 solid; border-bottom:thin #000 solid; padding:6px">
+<div><br>Lede<br />Two Years of Accumulated One-liners<br> By Neil Wathore<br /></div>
+</div>
+<div id="main"></div>
+</body>
+</html>
+
+

@@ -1,0 +1,50 @@
+<script src="../lib/jquery-1.11.1.min.js"></script>
+
+
+
+<h1>hello</h1>
+<script>
+$('body').click(advanceSlide)
+
+
+
+var slideCounter = 0;
+
+
+// markovGenerator
+
+
+//click = advanceSlide()
+
+function advanceSlide() {
+	slideCounter = slideCounter + 1
+	if(slideCounter == 1){
+		//do bla bla
+	}
+	if(slideCounter == 2){
+		//do bla bla
+	}
+
+
+	// if slideCounter > number of slides
+	// 	slideCounter = 0
+	// 	show title slide
+}
+//random image
+var images = ["trump.jpg", "trump2.jpg"]
+var imageFile;
+imageFile = images[Math.floor(Math.random() * images.length)];
+
+function advanceSlide() {
+	var t = (Math.floor(Math.random()*10)).toString();
+	$('body').empty()
+	$('body').append("<h1>You clicked</h1>")
+	$('body').append("<ul><li>Option "+t+"</li><li>Option two</li><li>Option 3</li>")
+	$('body').append("<img src='https://s-media-cache-ak0.pinimg.com/originals/c1/a9/53/c1a953f33ca733a212bcfa3b4777ef8a.jpg'/>")
+	$('body').append("<img src='https://s-media-cache-ak0.pinimg.com/originals/c1/a9/53/c1a953f33ca733a212bcfa3b4777ef8a.jpg'/>")
+
+		// generate new text with markov
+		// replace current text with new text
+		// possibly replace image
+}
+</script>

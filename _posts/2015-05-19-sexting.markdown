@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "__Project"
+description: Explore a VR text world about the atomic bomb while you receive sexts on my cell phone which powers the headset 
+color: "0,130,113"
+img: writing3d1.PNG
+---
+![__Project Image 2](/images/writing3d2.png)
+
+>__Project uses a mobile phone-based VR headset (GearVR or Cardboard) and studio headphones to immerse the reader in a 3D-world constructed from images and language taken from the American development and testing of the first atomic bomb at Los Alamos. The piece makes extensive use of recent developments in VR-spatialized audio to create a true 3-dimensional sonic environment: sounds coming from above you get louder when you cock an ear upward, the lower end gets cut off as you turn away from a sound etc.  The synthesized vocal sounds of the piece highlights the tension between the mechanized language intrinsic to the creation of such a technically complex device and the human lives it eliminates. As the reader explores the environment the language they encounter aurally forms the sometimes 3D architechure they navigate, showing the ability of science to both overlook and obscure the outside world.
+
+The above is the project description that participants see before they participate, but what the piece is really about is a series of text messages the viewer receives on the artist's cell phone while inside the Gear VR. The text messages gradually unfold a narrtive of intimacy and betrayal in the artist's personal life, forcing the viewer to choose between reading the abstract, mechanical language of the 3D piece or the more compelling narrative of the text messages. Since the text messages (appear to) violate the artists privacy, the useMr must decide whether to disrupt the piece and inform the artist or voyeuristically read on, creating a moment of real human drama within a hermetic bubble of technology.

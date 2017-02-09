@@ -1,0 +1,15 @@
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<script src="../lib/markov.js"></script>
+<script>
+var txt;
+txt = "Allison Parrish is a programmer, poet and an educator, who has contributed significantly to the fields of generative writing, botmaking, and word game design. Her conceptually and technically groundbreaking generative work has consistently driven the genre forward even as she's consistently and conscientiously laid foundation for initiates to digital language arts practice. Allison's as concerned with the elevating the parsability and relative accessibility of a genre that's categorized by its resistance to static form, and her commitment to transparency has pushed the standard of a genre whose potential Allison's beloved twitterbot @everyword, which tweeted every word in the English language from 2007-2014, is one of the most notable instances of a conceptual language project being taken up and by a broader audience (73.6K followers). Allison's other twitterbots include Deep Question Bot, Minimalist Poetry Bot, and The Ephemerides, and is an active member of the burgeoning botmaking community (#botALLY on twitter)"
+var markov = new MarkovGenerator(5,1000)
+markov.feed(txt)
+
+function generate(){
+	var t = markov.generate()
+	$('h1').text(t);
+}
+</script>
+<h1>Markov-generated text will go here</h1>
+<button onclick="generate()">Generate</button>
