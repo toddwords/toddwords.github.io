@@ -2,7 +2,7 @@
 <script src="../lib/markov.js"></script>
 <script>
 var txt;
-var markov = new MarkovGenerator(4,200)
+var markov = new MarkovGeneratorWord(1,40)
 $.get("windhover.txt", function(text) {
      markov.feed(text);
 });
