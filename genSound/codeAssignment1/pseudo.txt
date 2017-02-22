@@ -1,0 +1,11 @@
+User enters a block of text
+Text is split into words
+One word at a time is fed into the system
+Each word is split into characters
+An interval function plays new notes
+The ascii value of each character is mapped to a list of frequencies via modulo division
+The frequency is sent to a sawtooth oscillator
+Each additional letter in the word has a random chance of becoming a frequency played at the same time on one of several square wave oscillators 
+If the letter is not played at the same time it is played sequentially on the sawtooth
+A random letter of the word determines the bass note for a separate sawtooth oscillator
+Allow the user to change source text
