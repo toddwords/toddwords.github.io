@@ -92,6 +92,6 @@ function setNewText(newText){
 	wordCounter = 0;
 	charCounter = 0;
 	txt = newText.trim().split(" ");
-	txt = txt.filter(function(n){ return n != undefined }); 
+	txt = txt.filter(function(n){ return n != "" }); 
 
 }
