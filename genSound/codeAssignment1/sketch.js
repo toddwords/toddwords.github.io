@@ -1,9 +1,12 @@
 var metro, metro2;
 var sawOsc, bassOsc, sqOsc1, sqOsc2, sqOsc3;
-var txt = "The quick brown fox jumps over the lazy dog"
+var txt = "Type or paste text into the box in the upper left corner to change sounds"
 var pitchSetHira = [196,220,233.08,293.66,311.13,392,440,466.16,587.33,622.25,783.99];
 var wordCounter = 0
 var charCounter = 0
+function preload(){
+	chipFont = loadFont("ChipTunes-Bold.otf")
+}
 function setup(){
 	createCanvas(windowWidth,windowHeight)
 	//initalize oscillators
@@ -22,9 +25,11 @@ function setup(){
 }
 
 function draw(){
-	background(255)
+	background(0)
+	fill(0,255,0)
+	textFont(chipFont)
 	textAlign(CENTER)
-	textSize(72)
+	textSize(160)
 	text(txt[wordCounter], width/4, height/16, width/2, height*0.75);	
 }
 
@@ -86,6 +91,6 @@ function getFreqFromChar(char){
 function setNewText(newText){
 	wordCounter = 0;
 	charCounter = 0;
-	txt = newText.split(" ");
+	txt = newText.trim().split(" ");
 
 }
