@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "chiptext"
+description: A chiptune generator that uses text you type or paste in as its source material.
+img: chiptext.PNG
+color: "0,255,0"
+author: todd
+xLink: "/chiptext"
+---
