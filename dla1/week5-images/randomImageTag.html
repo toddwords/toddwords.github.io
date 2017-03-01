@@ -1,0 +1,29 @@
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<style>
+h1 {
+	text-align: center;
+/*    color: lightgreen;
+    font-family: Arial;
+    text-shadow: #000 2px 2px;
+*/}
+img {
+	margin:auto;
+	/*display: block;*/
+	/*border-radius:50%;*/
+
+}
+</style>
+<h1>The World Makes Me Feel</h1>
+<div style="width:400px;margin:auto">
+<img src="sadDolphin.gif" width="200px" />
+<img style="float:right" src="sadDolphin.gif" width="200px" />
+</div>
+<h1>So Very Much</h1>
+<script>
+var imgList = ["sadDolphin.gif", "sadGoofy.png", "sadGoofy2.png"]
+// $('img').attr('src', imgSrc)
+   $('img').each(function(){
+		var imgSrc = "images/" + imgList[Math.floor(Math.random() * imgList.length)]
+   		$(this).attr('src', imgSrc) 
+   })
+</script>
