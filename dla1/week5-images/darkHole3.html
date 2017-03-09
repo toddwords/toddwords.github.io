@@ -1,0 +1,70 @@
+<html>
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<style>
+/*this block of code makes an image take up the full background of a page*/
+html { 
+  background: url(black.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+p {
+	color: white;
+}
+#thanks {
+    display:none;
+    color:white;
+}
+</style>
+<body>
+    <input type="text" id="userInput"></input>
+    <button id="submitter">Submit</button>
+    <div id="thanks">munch munch</div> 
+    <div id="output"><p></p></div>
+   
+    <p><script>
+    var secrets = "";
+    $.get("https://api.myjson.com/bins/16qg75", function(data, textStatus, jqXHR) {
+        if(!data.DarkSecrets){data.DarkSecrets = ""}
+        console.log(data)
+        secrets = data.DarkSecrets
+        ShowSecrets()
+    });
+    // $.ajax({
+    //   url:"https://api.myjson.com/bins",
+    //   type:"POST",
+    //   data:'{"DarkSecrets":"mm"}',
+    //   contentType:"application/json; charset=utf-8",
+    //   dataType:"json",
+    //   success: function(data, textStatus, jqXHR){
+    //     console.log(data)
+    //   }
+    // });   
+        document.getElementById("submitter").addEventListener("click",function(){
+            var store = document.getElementById("userInput").value+"<br>"+secrets
+            $.ajax({
+                url:"https://api.myjson.com/bins/16qg75",
+                type:"PUT",
+                data:{"DarkSecrets":store},
+                contentType:"application/json; charset=utf-8",
+                dataType:"json",
+                success: function(data, textStatus, jqXHR){
+                    secrets = data.DarkSecrets
+                    ShowSecrets()
+                }
+            });  
+            document.getElementById("userInput").value=""
+            document.getElementById("thanks").style.display="inline-block"
+        });
+       function ShowSecrets (){
+        document.getElementById("output").innerHTML = secrets;
+       }
+    </script></p>
+</body>
+</html>
+
+<!-- store all submissions in a list forever
+separated by lines for each submission
+load previous submission
+add new one a line above -->

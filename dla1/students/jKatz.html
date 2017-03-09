@@ -1,0 +1,19 @@
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<input id="date" type="date" name="bday" min="2017-03-09">
+<button onclick="submitDate()">Submit</button>
+<script>
+var deathDate;
+var deathMonth;
+var deathDay;
+var d = new Date()
+function submitDate(){
+	deathDate = $('#date').val()
+	deathMonth = deathDate.split("-")[1]
+	deathDay = deathDate.split("-")[2]
+	if(deathMonth == "09"){
+		$('body').append("<h1>You died in september</h1>")
+	}
+
+
+}
+</script>

@@ -25,10 +25,13 @@ function setup(){
 
 function draw(){
 	background(240)
-	textSize(72)
+	textSize(16)
 	volume = gSlider.value()/100.0
 	gain1.amp(volume)
-	text(volume.toString(),width/2,height/2)
+	text(gSlider.value().toString(),200, 36)
+	text(loopStartSlider.value().toString(),640, 56)
+	text(loopLengthSlider.value().toString(),640, 76)
+
 }
 
 function keyTyped(){
