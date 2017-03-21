@@ -31,7 +31,7 @@ Mousetrap.bind("e", function(){
 })
 function speakSpell(words) {
 	responsiveVoice.speak(words)
-	$('h1').text(words, "UK English Female", 1.5)
+	$('h1').text(words)
 }
 function changeBG(image){
 	$("html").css('background-image', 'url('+image+')'); 
