@@ -1,0 +1,25 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<style>
+.definitelyDisplay {
+  display: block !important;
+}
+</style>
+<script>
+$.ajax({
+        url : 'easylist.txt',
+        type : 'get',
+        success : function (txt){
+          var txtArr = txt.split("\n").reverse() 
+          var selectors = txtArr 
+                .filter(function (line) {
+                  return /^##/.test(line)
+                })
+                .map(function (line) {
+                  return line.replace(/^##/, '')
+                })
+                .join(",")
+          console.log(selectors)
+         $(selectors).html("<h1>HI THERE</h1>").attr('style', function(i,s) { return (s||'') + ';display: block !important;'})
+    }})
+</script>
+<h1 style="color:green;" class="big-ad"></h1>
