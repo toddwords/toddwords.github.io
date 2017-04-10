@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Ad2Cart"
+description: An electro-percussive musical about the online shopping experience in which I play a talking ad network
+color: "214,32,140"
+img: ad2cart.jpg
+---
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1FSlRyEmj_0" frameborder="0" allowfullscreen></iframe>
+
+AD2CART is a music and multimedia theatrical work exploring psychedelic visions of digital consumerism conceived and performed by [Martim Galvão](http://martim.xyz), featuring myself and [Alex DuPuis](http://alexanderdupuis.com), and directed by [Kate Bergstrom](http://katebergstrom.com)
+
+I play a talking ad network in the piece who communicates with Martim's character through a custom chrome extension I built that modifies the content of web pages in real time via a wireless keyboard I wear during the performance. I wrote the text of the piece in collaboration with Martim who wrote all of the music.
+
+Ad2Cart was first performed at Brown University on February 17th, 2017.
