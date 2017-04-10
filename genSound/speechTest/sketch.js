@@ -40,7 +40,8 @@ function draw(){
 
 }
 
-function keyTyped(){
+function mouseClicked(){
+	window.parent.location.href= "https://www.theweirdestthingsforsale.com/weird-thing/";
 }
 
 
