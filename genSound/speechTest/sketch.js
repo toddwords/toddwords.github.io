@@ -6,15 +6,13 @@ var myVoice = new p5.Speech();
 var voice;
 var lastAmp, currAmp;
 var baseSize
-function preload(){
-	voice = loadSound('voice.mp3')
-}
+
 function setup(){
 	createCanvas(windowWidth,windowHeight)
 	noFill();
+	voice = loadSound('voice.mp3', function(){voice.play()})
 	amp = new p5.Amplitude();
 	reverb = new p5.Reverb();
-  	voice.play()
   	// voice.disconnect()
   	// voice.connect(distortion)
   	reverb.process(voice,0.5,2)
