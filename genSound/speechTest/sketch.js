@@ -25,7 +25,7 @@ function setup(){
 }
 
 function draw(){
-	background(225)
+	background(240)
 	noStroke()
 	currAmp = amp.getLevel();
 	lerpAmp = lerp(lastAmp,currAmp, 0.08)
