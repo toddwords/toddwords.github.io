@@ -52,19 +52,18 @@ function draw(){
   	ellipse(width/2, height/2, baseSize, baseSize);
     scale(width/1536,width/1536)
     rotate(0.2)
-    image(gecko2,300+(millis()/70),100)
-    image(gecko1,width-(millis()/50),200)
+    image(gecko2,width/4+(millis()/70),height/8)
+    image(gecko1,width-(millis()/50),height/4)
     rotate(-0.5)
-    image(gecko3,-100+(millis()/20),40)
-    image(gecko2,width-100-(millis()/5),0)
+    image(gecko3,width*-0.07+(millis()/20),height/20)
+    image(gecko2,width-width*0.07-(millis()/5),0)
     image(gecko1,width-(millis()/5),gecko2.height *0.75)
 
     translate(width/2,height/2)
     rotate(millis()/1000)
-    image(gecko1,-500+(millis()/40),40)
+    image(gecko1,width/-3+(millis()/40),height/20)
     rotate(millis()/10000)
-    image(gecko1, 200+(millis()/130),70)
-    console.log(gecko1.width)
+    image(gecko1, width/8+(millis()/130),height/11)
 
 }
 
