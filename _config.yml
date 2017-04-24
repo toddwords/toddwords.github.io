@@ -1,7 +1,7 @@
 
 title: Toddwords.com | Homepage of web poet and digital artist Todd Anderson
 desctiption: Homepage of web poet and digital artist Todd Anderson
-url: http://toddwords.com/
+url: https://toddwords.com/
 permalink: ':title/'
 repository: toddwords/toddwords.github.io
 markdown: kramdown
