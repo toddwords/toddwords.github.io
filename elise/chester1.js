@@ -36,11 +36,11 @@ function setup(){
   	lastAmp = 0;
   	if(width >= height){
   		baseSize = height * 0.5
-      Things.push(new Thing(images[0], width/4, -100,0,3))
-      Things.push(new Thing(images[1], width/8, height/4,0,-2))
-      Things.push(new Thing(images[2], width - width/4, height,0,1))
-      Things.push(new Thing(images[3], width - width/8, height/2,0,-4))
-      Things.push(new Thing(images[2], width/2, height,2,0))
+      Things.push(new Thing(choice(images), width/4, -100,0,3))
+      Things.push(new Thing(choice(images), width/8, height/4,0,-2))
+      Things.push(new Thing(choice(images), width - width/4, height,0,1))
+      Things.push(new Thing(choice(images), width - width/8, height/2,0,-4))
+      Things.push(new Thing(choice(images), width/2, height,2,0))
   	} else {
   		baseSize = width * 0.5
   	}
@@ -68,7 +68,7 @@ function draw(){
 }
 
 function mouseClicked(){
-	window.parent.location.href= "https://www.theweirdestthingsforsale.com/weird-thing/";
+	window.parent.location.href= "https://www.amazon.com/dp/B01GGHY0Y2?ref_=ams_ad_dp_asin_1/";
 }
 function playNext(){
   playlist[playCounter].play()
@@ -101,3 +101,6 @@ function Thing(img,X,Y,sX,sY){
 }
 
 
+function choice(arr){
+  return arr[Math.floor(Math.random() * arr.length)]
+}
