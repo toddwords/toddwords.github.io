@@ -1,6 +1,6 @@
 var ads = {
   intro : {clips: ['intro1.mp3', 'intro2.mp3', 'intro3.mp3', 'intro4.mp3', 'intro5.mp3', 'intro6.mp3', 'intro7.mp3'], images: ['cart1.png', 'cart2.png', 'cart3.png', 'cart4.png', 'cart5.png', 'cart6.png'], bg: 245, link:'https://amazon.com'},
-  chester3 : {clips: ['pain1.mp3', 'pain2.mp3', 'pain3.mp3', 'pain4.mp3'], images: ['cart1.png'], bg: 0, link:'https://amazon.com'},
+  chester3 : {clips: ['pain1.mp3', 'pain2.mp3', 'pain3.mp3', 'pain4.mp3'], images: [], bg: 0, link:'https://amazon.com'},
   geico1 : {clips: ['geico1.mp3','geico2.mp3', 'geico3.mp3'], images: ['gecko1.png', 'gecko2.gif', 'gecko3.png'], bg: 245, link: 'https://geico.com'},
   geico2 : {clips: ['geico2-1.mp3','geico2-3.mp3', 'geico2-4.mp3'], images: ['gecko1.png', 'gecko2.gif', 'gecko3.png'], bg: 245, link: 'https://geico.com'},
   geico3 : {clips: ['geico3-1.mp3','geico3-2.mp3','geico3-3.mp3', 'geico3-4.mp3'], images: ['gecko1.png', 'gecko2.gif', 'gecko3.png'], bg: 245, link: 'https://geico.com'},
