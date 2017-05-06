@@ -1,12 +1,12 @@
 var ads = {
   intro : {clips: ['intro1.mp3', 'intro2.mp3', 'intro3.mp3', 'intro4.mp3', 'intro5.mp3', 'intro6.mp3', 'intro7.mp3'], images: ['cart1.png', 'cart2.png', 'cart3.png', 'cart4.png', 'cart5.png', 'cart6.png'], bg: 245, link:'https://amazon.com'},
-  chester3 : {clips: ['pain1.mp3', 'pain2.mp3', 'pain3.mp3', 'pain4.mp3'], images: [], bg: 0, link:'https://amazon.com'},
+  chester3 : {clips: ['pain1.mp3', 'pain2.mp3', 'pain3.mp3', 'pain4.mp3'], images: [], bg: 0, link:'https://www.amazon.com/Pain-Relief-Ointment-7oz-Jar/dp/B00FA5Q8LU'},
   geico1 : {clips: ['geico1.mp3','geico2.mp3', 'geico3.mp3'], images: ['gecko1.png', 'gecko2.gif', 'gecko3.png'], bg: 245, link: 'https://geico.com'},
-  geico2 : {clips: ['geico2-1.mp3','geico2-3.mp3', 'geico2-4.mp3'], images: ['gecko1.png', 'gecko2.gif', 'gecko3.png'], bg: 245, link: 'https://geico.com'},
-  geico3 : {clips: ['geico3-1.mp3','geico3-2.mp3','geico3-3.mp3', 'geico3-4.mp3'], images: ['gecko1.png', 'gecko2.gif', 'gecko3.png'], bg: 245, link: 'https://geico.com'},
+  geico2 : {clips: ['geico2-1.mp3','geico2-3.mp3', 'geico2-4.mp3'], images: ['gecko1.png', 'gecko2.gif', 'gecko3.png'], bg: 245, link: 'https://www.amazon.com/Youre-Only-Human-Guide-Life/dp/0761174826/ref=sr_1_15?ie=UTF8&qid=1494082979&sr=8-15&keywords=geico'},
+  geico3 : {clips: ['geico3-1.mp3','geico3-2.mp3','geico3-3.mp3', 'geico3-4.mp3'], images: ['gecko1.png', 'gecko2.gif', 'gecko3.png'], bg: 245, link: 'https://www.amazon.com/Design-Toscano-Jo-Gecko-Statue/dp/B00CW2PRGQ'},
   chester1 : {clips: ['chester1-1.mp3','chester1-2.mp3','chester1-3.mp3', 'chester1-4.mp3'], images: ['chester1.jpg', 'chester2.png', 'chester3.png','chester4.png'], bg: 'rgb(245,50,0)', link: 'https://www.amazon.com/Cheetos-Chester-Dresser-Halloween-Cheetah/dp/B01LZKSBOM'},
-  chester2 : {clips: ['chester2-1.mp3','chester2-2.mp3','chester2-3.mp3'], images: ['chesterBike.png','chester1.jpg', 'chester3.png','chesterBike.png'], bg: 'rgb(245,50,0)', link: 'https://www.amazon.com/Cheetos-Chester-Dresser-Halloween-Cheetah/dp/B01LZKSBOM'},
-  bell1 : {clips: ['bell1-1.mp3','bell1-2.mp3','bell1-3.mp3'], images: ['bell1.gif','bell2.png','taco1.png', 'taco2.png', 'taco3.png','taco4.png', 'taco5.png'], bg: 'rgb(247,184,84)', link: 'https://tacobell.com'},
+  chester2 : {clips: ['chester2-1.mp3','chester2-2.mp3','chester2-3.mp3'], images: ['chesterBike.png','chester1.jpg', 'chester3.png','chesterBike.png'], bg: 'rgb(245,50,0)', link: 'https://www.amazon.com/Frito-Lay-Flamin-Variety-Pack-Count/dp/B00E1Z257G/ref=pd_sim_325_1?_encoding=UTF8&pd_rd_i=B00E1Z257G&pd_rd_r=V79M2C3K6YZ8DCAWJFBX&pd_rd_w=mLtN7&pd_rd_wg=PeZNN&psc=1&refRID=V79M2C3K6YZ8DCAWJFBX'},
+  bell1 : {clips: ['bell1-1.mp3','bell1-2.mp3','bell1-3.mp3'], images: ['bell1.gif','bell2.png','taco1.png', 'taco2.png', 'taco3.png','taco4.png', 'taco5.png'], bg: 'rgb(247,184,84)', link: 'http://www.ebay.com/itm/Taco-Bell-Sauce-Packets-Fire-Hot-Diablo-/192157533726'},
   bell2 : {clips: ['bell2-1.mp3','bell2-1.mp3','bell2-1.mp3'], images: ['bell1.gif','bell2.png','taco1.png', 'taco2.png', 'taco3.png','taco4.png', 'taco5.png'], bg: 'rgb(247,184,84)', link: 'https://tacobell.com'}
 }
 var currAd = ads[getParameterByName('scene')]
