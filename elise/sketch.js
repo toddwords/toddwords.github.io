@@ -67,7 +67,7 @@ function draw(){
 
     rotate(millis()/1000)
     image(gecko1,width/-3+(millis()/40),height/20)
-    image(gecko2,millis()/65,height/40)
+    image(gecko,2millis()/65,height/40)
     rotate(millis()/10000)
     image(gecko3, width/8+(millis()/130),height - gecko1.height - height/11)
 
