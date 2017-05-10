@@ -24,6 +24,8 @@ function setup(){
 	bass['kite1'] =  [1,0,0,0,2,0,0,3,0,0,1,0,0,0,2,0,4,0,0,0];
 	mid.output = '#midText'
 	lead.output = '#leadText'
+	bass.osc.amp(1)
+	mid.osc.amp(0.5)
 	kite1.setBPM(60)
     umb1.setBPM(100)
     el1.setBPM(45)
