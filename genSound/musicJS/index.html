@@ -23,10 +23,10 @@
 </head>
 
 <body>
-<input id="bass" value=""><span id='bassText'></span><br>
-<input id="mid" value=""><span id='midText'></span><br>
-<input id="lead" value=""><span id='leadText'></span><br>
-<input id="rest" value=""><span id='restText'></span><br>
+<input id="bass" autofocus onfocus="this.selectionStart = this.selectionEnd = this.value.length;" value=""><span id='bassText'></span><br>
+<input id="mid" onfocus="this.selectionStart = this.selectionEnd = this.value.length;" value=""><span id='midText'></span><br>
+<input id="lead" onfocus="this.selectionStart = this.selectionEnd = this.value.length;" value=""><span id='leadText'></span><br>
+<input id="rest" onfocus="this.selectionStart = this.selectionEnd = this.value.length;" value=""><span id='restText'></span><br>
 <!-- <input id="speed" value="200"><br>
 <select onchange="changePitchSet(this.value)">
   <option value="pitchSet1">Major</option>

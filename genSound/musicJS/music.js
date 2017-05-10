@@ -1,5 +1,6 @@
 var pitchSets= { 
- pitchSet1 : [220, 247.5, 278.44, 293.34, 330, 371.25, 417.655, 440,495,556.88,586.67,660,742.5,835.31,880],
+ pitchSet1 : [220, 247.5, 278.44, 293.34, 330, 371.25, 417.655, 440,495,556.88,586.67,660],
+ // pitchSet1 : [220, 247.5, 278.44, 293.34, 330, 371.25, 417.655, 440,495,556.88,586.67,660,742.5,835.31,880],
  pitchSet2 : [207.65, 233.08, 277.18, 311.13, 329.63,349.23,415.30,466.16, 554.37,622.25,659.25,698.46, 830.61, 932.33],
  pitchSetEnig : [174.61, 185, 220, 246.94, 277.18, 311.13, 329.63,349.23,369.99,440,493.88, 554.37,622.25,659.25,698.46, ],
  pitchSetHira : [196,220,233.08,293.66,311.13,392,440,466.16,587.33,622.25,783.99],
@@ -7,6 +8,7 @@ var pitchSets= {
  pitchSetMinor : [264.63,293.66,311.13,349.23,415.30,493.88,523.25,587.33,622.25,698.46,830.61]
 }
 var restString = ''
+var currInput = 0
 var kite1 = new p5.Part();
 var umb1 = new p5.Part();
 var el1 = new p5.Part();
@@ -80,7 +82,6 @@ function Synth(){
 	this.output = "#bassText"
 	this.play = function(trackName){
 		note = this[trackName][this.counter % this[trackName].length]
-		console.log(note)
 		if(this.counter % this[trackName].length == 0){this.currWord = ''}
 		if(restString.indexOf(note) > -1){if(note === ' '){this.currWord += note}note = 0}
 		if(isNaN(note) || note === ' '){this.currWord += note; note = 1 + note.charCodeAt(0) % currPitchSet.length; }
@@ -115,11 +116,15 @@ function Synth(){
  	bass.counter = 0
  })
  $('#mid').keyup(function(){
- 	mid.basic = $(this).val().trim().split('')
+ 	if($(this).val().trim().length > 0){
+ 		mid.basic = $(this).val().trim().split('')
+ 	}
  	mid.counter = 0
  })
  $('#lead').keyup(function(){
- 	lead.basic = $(this).val().trim().split('')
+ 	if($(this).val().trim().length > 0){
+ 		lead.basic = $(this).val().trim().split('')
+ 	}
  	lead.counter = 0
  })
  $('#rest').keyup(function(){
@@ -129,3 +134,19 @@ function Synth(){
  $('#speed').keyup(function(){
  	if($(this).val().length >= 2){playBasic($(this).val())}
  })
+ $('input').focus(function(){
+  var that = this;
+  setTimeout(function(){ that.selectionStart = that.selectionEnd = 10000; }, 0);
+});
+function keyPressed(){
+	if(keyCode == UP_ARROW){
+		if(currInput > 0){currInput--}
+		$('input')[currInput].focus()
+	}
+	else if(keyCode == DOWN_ARROW || keyCode == ENTER){
+		if(currInput < 3){currInput++}
+		else{currInput=0}
+		$('input')[currInput].focus()
+	}
+
+}
