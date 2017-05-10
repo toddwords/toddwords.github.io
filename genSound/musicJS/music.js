@@ -115,6 +115,8 @@ function Synth(){
  	if($(this).val().trim().length > 0){
 	 	bass.basic = $(this).val().trim().split('')
 	 	bass.osc.amp(1)
+ 	}else{
+ 		bass.basic = [0]
  	}
  	bass.counter = 0
  })
@@ -122,12 +124,16 @@ function Synth(){
  	if($(this).val().trim().length > 0){
  		mid.basic = $(this).val().trim().split('')
 		mid.osc.amp(0.5)
+ 	}else{
+ 		mid.basic = [0]
  	}
  	mid.counter = 0
  })
  $('#lead').keyup(function(){
  	if($(this).val().trim().length > 0){
  		lead.basic = $(this).val().trim().split('')
+ 	} else{
+ 		lead.basic = [0]
  	}
  	lead.counter = 0
  })
@@ -147,10 +153,11 @@ function keyPressed(){
 		if(currInput > 0){currInput--}
 		$('input')[currInput].focus()
 	}
-	else if(keyCode == DOWN_ARROW || keyCode == ENTER){
+	else if(keyCode == DOWN_ARROW || keyCode == ENTER || keyCode == TAB){
 		if(currInput < 3){currInput++}
 		else{currInput=0}
 		$('input')[currInput].focus()
+		return false
 	}
 
 }
