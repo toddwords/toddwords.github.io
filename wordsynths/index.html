@@ -1,0 +1,43 @@
+<head>
+  <script language="javascript" src="../js/p5.min.js"></script>
+  <script language="javascript" src="../js/p5.dom.min.js"></script>
+  <!-- uncomment lines below to include extra p5 libraries -->
+	<!--<script language="javascript" src="../addons/p5.dom.js"></script>-->
+  <script language="javascript" src="../js/p5.sound.js"></script>
+  <script language="javascript" src="../js/jquery.min.js"></script>
+  <!-- this line removes any default padding and style. you might only need one of these values set. -->
+  <style> 
+  body {padding: 0; margin: 0; font-family:'Trebuchet MS';}
+  #rest{color:red;}
+  #restText{
+    text-decoration: line-through;
+    color:red;
+  }
+  span {
+    margin-left:2%;
+    font-size:3em;
+  }
+  input{font-size: 3em;}
+  input:focus{
+    background-color: LightGoldenRodYellow
+  }
+  </style>
+</head>
+
+<body>
+<input id="bass" autofocus onfocus="this.selectionStart = this.selectionEnd = this.value.length;" value=""><span id='bassText'></span><br>
+<input id="mid" onfocus="this.selectionStart = this.selectionEnd = this.value.length;" value=""><span id='midText'></span><br>
+<input id="lead" onfocus="this.selectionStart = this.selectionEnd = this.value.length;" value=""><span id='leadText'></span><br>
+<input id="rest" onfocus="this.selectionStart = this.selectionEnd = this.value.length;" value=""><span id='restText'></span><br>
+<!-- <input id="speed" value="200"><br>
+<select onchange="changePitchSet(this.value)">
+  <option value="pitchSet1">Major</option>
+  <option value="pitchSet2">Blues</option>
+  <option value="pitchSetHira">Hirajoshi</option>
+  <option value="pitchSetHira2">Hirajoshi2</option>
+  <option value="pitchSetEnig">Enigmatic</option>
+  <option value="pitchSetMinor">Minor</option>
+</select> -->
+<script language="javascript" src="music.js"></script>
+
+</body>
