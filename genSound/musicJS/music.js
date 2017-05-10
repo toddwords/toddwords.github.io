@@ -24,8 +24,6 @@ function setup(){
 	bass['kite1'] =  [1,0,0,0,2,0,0,3,0,0,1,0,0,0,2,0,4,0,0,0];
 	mid.output = '#midText'
 	lead.output = '#leadText'
-	bass.osc.amp(1)
-	mid.osc.amp(0.5)
 	kite1.setBPM(60)
     umb1.setBPM(100)
     el1.setBPM(45)
@@ -114,12 +112,16 @@ function Synth(){
  }
 
  $('#bass').keyup(function(){
- 	bass.basic = $(this).val().trim().split('')
+ 	if($(this).val().trim().length > 0){
+	 	bass.basic = $(this).val().trim().split('')
+	 	bass.osc.amp(1)
+ 	}
  	bass.counter = 0
  })
  $('#mid').keyup(function(){
  	if($(this).val().trim().length > 0){
  		mid.basic = $(this).val().trim().split('')
+		mid.osc.amp(0.5)
  	}
  	mid.counter = 0
  })
