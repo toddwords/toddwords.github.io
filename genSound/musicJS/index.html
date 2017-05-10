@@ -6,14 +6,28 @@
   <script language="javascript" src="../../js/p5.sound.js"></script>
   <script language="javascript" src="../../js/jquery.min.js"></script>
   <!-- this line removes any default padding and style. you might only need one of these values set. -->
-  <style> body {padding: 0; margin: 0;} </style>
+  <style> 
+  body {padding: 0; margin: 0; font-family:'Trebuchet MS';}
+  #rest{color:red;}
+  #restText{
+    text-decoration: line-through;
+    color:red;
+  }
+  span {
+    margin-left:2%;
+    font-size:3em;
+  }
+  input{font-size: 3em;}
+
+  </style>
 </head>
 
 <body>
-Bass:<input id="bass" value="-0101"><br>
-Mid:<input id="mid" value="0101"><br>
-Lead:<input id="lead" value="0101"><br>
-Speed:<input id="speed" value="200"><br>
+<input id="bass" value=""><span id='bassText'></span><br>
+<input id="mid" value=""><span id='midText'></span><br>
+<input id="lead" value=""><span id='leadText'></span><br>
+<input id="rest" value=""><span id='restText'></span><br>
+<!-- <input id="speed" value="200"><br>
 <select onchange="changePitchSet(this.value)">
   <option value="pitchSet1">Major</option>
   <option value="pitchSet2">Blues</option>
@@ -21,7 +35,7 @@ Speed:<input id="speed" value="200"><br>
   <option value="pitchSetHira2">Hirajoshi2</option>
   <option value="pitchSetEnig">Enigmatic</option>
   <option value="pitchSetMinor">Minor</option>
-</select>
+</select> -->
 <script language="javascript" src="music.js"></script>
 
 </body>

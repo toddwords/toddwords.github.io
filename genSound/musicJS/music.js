@@ -6,6 +6,7 @@ var pitchSets= {
  pitchSetHira2 : [196,246.94,277.18,293.66,369.99,392,493.88,554.37,587.33,739.99,783.99],
  pitchSetMinor : [264.63,293.66,311.13,349.23,415.30,493.88,523.25,587.33,622.25,698.46,830.61]
 }
+var restString = ''
 var kite1 = new p5.Part();
 var umb1 = new p5.Part();
 var el1 = new p5.Part();
@@ -19,6 +20,8 @@ function setup(){
 	mid['kite1'] = [1,0,2,4,5,1,0,1]
 	lead['kite1'] = [7,0,8,9,5,0,11,12,8]
 	bass['kite1'] =  [1,0,0,0,2,0,0,3,0,0,1,0,0,0,2,0,4,0,0,0];
+	mid.output = '#midText'
+	lead.output = '#leadText'
 	kite1.setBPM(60)
     umb1.setBPM(100)
     el1.setBPM(45)
@@ -72,9 +75,16 @@ function Synth(){
 	this.env.setADSR(0.05,0.2,0.2,0.5)
 	this.octave = 1
 	this.counter = 0
-	this.basic = [0,1,0,1]
+	this.basic = [0]
+	this.currWord = ""
+	this.output = "#bassText"
 	this.play = function(trackName){
 		note = this[trackName][this.counter % this[trackName].length]
+		console.log(note)
+		if(this.counter % this[trackName].length == 0){this.currWord = ''}
+		if(restString.indexOf(note) > -1){if(note === ' '){this.currWord += note}note = 0}
+		if(isNaN(note) || note === ' '){this.currWord += note; note = 1 + note.charCodeAt(0) % currPitchSet.length; }
+		$(this.output).text(this.currWord)
 		if(note > 0){
 			this.osc.freq(currPitchSet[note-1]*this.octave)
 			this.env.play(this.osc)
@@ -102,12 +112,19 @@ function Synth(){
 
  $('#bass').keyup(function(){
  	bass.basic = $(this).val().trim().split('')
+ 	bass.counter = 0
  })
  $('#mid').keyup(function(){
  	mid.basic = $(this).val().trim().split('')
+ 	mid.counter = 0
  })
  $('#lead').keyup(function(){
  	lead.basic = $(this).val().trim().split('')
+ 	lead.counter = 0
+ })
+ $('#rest').keyup(function(){
+ 	restString = $(this).val().trim()
+ 	$('#restText').text(restString)
  })
  $('#speed').keyup(function(){
  	if($(this).val().length >= 2){playBasic($(this).val())}
