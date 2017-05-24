@@ -9,7 +9,7 @@ var ads = {
   bell1 : {clips: ['bell1-1.mp3','bell1-2.mp3','bell1-3.mp3'], images: ['bell1.gif','bell2.png','taco1.png', 'taco2.png', 'taco3.png','taco4.png', 'taco5.png'], bg: 'rgb(247,184,84)', link: 'http://www.ebay.com/itm/Taco-Bell-Sauce-Packets-Fire-Hot-Diablo-/192157533726'},
   bell2 : {clips: ['bell2-1.mp3','bell2-1.mp3','bell2-1.mp3'], images: ['bell1.gif','bell2.png','taco1.png', 'taco2.png', 'taco3.png','taco4.png', 'taco5.png'], bg: 'rgb(247,184,84)', link: 'https://tacobell.com'}
 }
-var currAd = ads[getParameterByName('scene')]
+var currAd = getParameterByName('scene') ? ads[getParameterByName('scene')] : randomProperty(ads)
 var amp; 
 var reverb;
 var geico1,geico2,geico3;
@@ -127,3 +127,8 @@ function getParameterByName(name, url) {
 function choice(arr){
   return arr[Math.floor(Math.random() * arr.length)]
 }
+
+var randomProperty = function (obj) {
+    var keys = Object.keys(obj)
+    return obj[keys[ keys.length * Math.random() << 0]];
+};
