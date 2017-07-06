@@ -20,7 +20,9 @@
 <audio id="clap" preload="auto" src="sounds/clap.wav"></audio>
 <audio id="scratch" preload="auto" src="sounds/Scratch.wav"></audio>
 <audio id="remix" preload="auto" src="sounds/Remix.wav"></audio>
-<style>h1{font-size:160px; text-align: center; margin-top: 100px; font-family: Century Gothic, sans-serif;}
+<style>
+h1{font-size:160px; text-align: center; margin-top: 100px; font-family: Century Gothic, sans-serif;}
+#intro{font-size:90px; color:white;}
 html { 
   background: url("gifs/rad.gif") no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -29,7 +31,7 @@ html {
   background-size: cover;
 }
 </style>
-<h1>Press letters to say words and change gifs. Press numbers to drop a beat. Press Shift+Space to edit code.</h1>
+<h1><span id='intro'>Press letters to say words and change gifs. Press numbers to drop a beat. Press Shift+Space to edit code.</span></h1>
 <textarea id="gifList" style="float:right; width:25%; display:none" rows="25">
 list of available gifs:
 ambition.gif
