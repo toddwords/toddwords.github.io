@@ -1,11 +1,11 @@
 var pitchSets= { 
  pitchSet1 : [220, 247.5, 278.44, 293.34, 330, 371.25, 417.655, 440,495,556.88,586.67,660],
  // pitchSet1 : [220, 247.5, 278.44, 293.34, 330, 371.25, 417.655, 440,495,556.88,586.67,660,742.5,835.31,880],
- pitchSet2 : [207.65, 233.08, 277.18, 311.13, 329.63,349.23,415.30,466.16, 554.37,622.25,659.25,698.46, 830.61, 932.33],
+ pitchSet2 : [207.65, 233.08, 277.18, 311.13, 329.63,349.23,415.30,466.16, 554.37,622.25,659.25,698.46],
  pitchSetEnig : [174.61, 185, 220, 246.94, 277.18, 311.13, 329.63,349.23,369.99,440,493.88, 554.37,622.25,659.25,698.46, ],
  pitchSetHira : [196,220,233.08,293.66,311.13,392,440,466.16,587.33,622.25,783.99],
  pitchSetHira2 : [196,246.94,277.18,293.66,369.99,392,493.88,554.37,587.33,739.99,783.99],
- pitchSetMinor : [264.63,293.66,311.13,349.23,415.30,493.88,523.25,587.33,622.25,698.46,830.61]
+ pitchSetMinor : [264.63,293.66,311.13,349.23,415.30,493.88,523.25,587.33,622.25,698.46]
 }
 var restString = ''
 var currInput = 0
@@ -18,28 +18,32 @@ var mid = new Synth();
 var lead = new Synth();
 var bass = new Synth();
 var currLoop;
+var loopSpeed = 200
+var bassADSR = [0.2,0.5,0.6,1.0]
+var ADSR = [0.05,0.2,0.2,0.5]
 function setup(){
-	mid['kite1'] = [1,0,2,4,5,1,0,1]
-	lead['kite1'] = [7,0,8,9,5,0,11,12,8]
-	bass['kite1'] =  [1,0,0,0,2,0,0,3,0,0,1,0,0,0,2,0,4,0,0,0];
+	// mid['kite1'] = [1,0,2,4,5,1,0,1]
+	// lead['kite1'] = [7,0,8,9,5,0,11,12,8]
+	// bass['kite1'] =  [1,0,0,0,2,0,0,3,0,0,1,0,0,0,2,0,4,0,0,0];
 	mid.output = '#midText'
 	lead.output = '#leadText'
-	kite1.setBPM(60)
-    umb1.setBPM(100)
-    el1.setBPM(45)
-    c1.setBPM(60)
+	// kite1.setloopSpeed(60)
+ //    umb1.setloopSpeed(100)
+ //    el1.setloopSpeed(45)
+ //    c1.setloopSpeed(60)
 	bass.env.setADSR(0.2,0.5,0.6,1.0)
 	bass.octave = 0.5
 	lead.octave = 2
-	bass['umb1'] = [3,1,3,1,3,1,3,1,4,1,4,1,4,1,4,1,5,1,1,0,1,0,1,0,5,1,1,0,1,0,1,0]
-	lead['umb1'] = [0,0,0,0,0,0,0,0,0,0,0,6,0,8,9,11,9,0,0,8,9,11,9,0,0,0,0,0,0,0,0,0,0,0]
-	mid['umb1'] = [0,3,0,3,0,3,3,3,0,4,0,4,0,4,4,4,0,5,0,5,0,5,5,5]
-	bass['el1'] = [1,0,2,0,3,0,6,0]
+	// bass['umb1'] = [3,1,3,1,3,1,3,1,4,1,4,1,4,1,4,1,5,1,1,0,1,0,1,0,5,1,1,0,1,0,1,0]
+	// lead['umb1'] = [0,0,0,0,0,0,0,0,0,0,0,6,0,8,9,11,9,0,0,8,9,11,9,0,0,0,0,0,0,0,0,0,0,0]
+	// mid['umb1'] = [0,3,0,3,0,3,3,3,0,4,0,4,0,4,4,4,0,5,0,5,0,5,5,5]
+	// bass['el1'] = [1,0,2,0,3,0,6,0]
 	// lead.createPhrase(el1, [0,0,10,0,0,10,10,0,0,0,0,0,6,10,11,0,0,10,0,0,0,10])
-	mid['el1'] = [0]
+	// mid['el1'] = [0]
 	// mid['el1'] = [6,0,0,0,0,0,0,0,6,0,0,0,0,0,0,6]
-	lead['el1'] = [0]
-	playBasic(200)
+	// lead['el1'] = [0]
+
+	playBasic(loopSpeed)
 }
 
 
@@ -57,7 +61,7 @@ function playTrack(trackName, fadeInTime){
 }
 function playBasic(speed){
 	clearInterval(currLoop)
-	resetCounters();
+	// resetCounters();
 	currLoop = setInterval(function(){
     	mid.play('basic')
     	lead.play('basic')
@@ -110,7 +114,10 @@ function Synth(){
   function changePitchSet(ps){
  	currPitchSet = pitchSets[ps]
  }
-
+function changeBGColor(color){
+	$('html').css('background-color', color)
+	// $('input').css('background-color', color)
+}
  $('#bass').keyup(function(){
  	if($(this).val().trim().length > 0){
 	 	bass.basic = $(this).val().trim().split('')
@@ -160,4 +167,51 @@ function keyPressed(){
 		return false
 	}
 
+	else if(keyIsDown(SHIFT) && keyIsDown(CONTROL)){
+		if(key == '1'){
+			changePitchSet('pitchSet1')
+			changeBGColor('White')
+		}
+		else if(key == '2'){
+			changePitchSet('pitchSet2')
+			changeBGColor('LightSkyBlue')
+		}
+		else if(key == '3'){
+			changePitchSet('pitchSetMinor')
+			changeBGColor('DarkGray')
+		}
+		else if(key == '4'){
+			changePitchSet('pitchSetEnig')
+			changeBGColor('Plum')
+		}
+		else if(key == '5'){
+			changePitchSet('pitchSetHira')
+			changeBGColor('LightSalmon')
+		}
+		else if(key == '6'){
+			changePitchSet('pitchSetHira2')
+			changeBGColor('LightPink')
+		}
+		else if(key == '8'){
+			loopSpeed *= 1.08
+			ADSR = ADSR.map(x => x * 1.5)
+			bassADSR = bassADSR.map(x => x * 1.5)
+			bass.env.setADSR(bassADSR[0],bassADSR[1],bassADSR[2],bassADSR[3])
+			mid.env.setADSR(ADSR[0],ADSR[1],ADSR[2],ADSR[3])
+			lead.env.setADSR(ADSR[0],ADSR[1],ADSR[2],ADSR[3])
+			playBasic(loopSpeed)
+
+			console.log(loopSpeed)
+		}
+		else if(key == '9'){
+			loopSpeed = loopSpeed / 1.08
+			ADSR = ADSR.map(x => x / 1.5)
+			bassADSR = bassADSR.map(x => x / 1.5)
+			bass.env.setADSR(bassADSR[0],bassADSR[1],bassADSR[2],bassADSR[3])
+			mid.env.setADSR(ADSR[0],ADSR[1],ADSR[2],ADSR[3])
+			lead.env.setADSR(ADSR[0],ADSR[1],ADSR[2],ADSR[3])
+			playBasic(loopSpeed)
+			console.log(loopSpeed)
+		}
+	}
 }

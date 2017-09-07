@@ -6,88 +6,7 @@ meSpeak.loadConfig("lib/mespeak_config.json");
 meSpeak.loadVoice('voices/en/en-us.json');
 var sounds = {};
 
-Mousetrap.bind('Q', function() {
-	speakNspell('we', "blue");
-	showGif('rad.gif')
-})
 
-Mousetrap.bind('W', function() {
-	speakNspell('will', "green");
-	showGif('smile.gif')
-})
-
-Mousetrap.bind('E', function() {
-	speakNspell('make');
-	showGif("blowmind.gif");
-})
-
-Mousetrap.bind('R', function() {
-	speakNspell("bad");
-	showGif("couch.gif");
-})
-
-Mousetrap.bind('T', function() {
-	speakNspell("things", "green");
-	showGif("shaqdance.gif");
-})
-
-Mousetrap.bind('Y', function() {
-	speakNspell("and", "orange");
-	showGif("money.gif");
-})
-
-Mousetrap.bind('U', function() {
-	speakNspell("have", "purple");
-	showGif("whoa.gif");
-})
-Mousetrap.bind('I', function() {
-	speakNspell("a");
-	showGif("couch.gif");
-})
-Mousetrap.bind('O', function() {
-	speakNspell("good", "orange");
-	showGif("seals.gif");
-})
-Mousetrap.bind('P', function() {
-	speakNspell("time");
-	showGif("smile.gif");
-})
-Mousetrap.bind('A', function() {
-	speakNspell("build");
-	showGif("think.gif");
-})
-Mousetrap.bind('S', function() {
-	speakNspell("a");
-	showGif("scream.gif");
-})
-Mousetrap.bind('D', function() {
-	speakNspell("new");
-	showGif("wink.gif");
-})
-Mousetrap.bind('F', function() {
-	speakNspell("aura");
-	showGif("shaqdance.gif");
-})
-Mousetrap.bind('G', function() {
-	speakNspell("of");
-	showGif("scream.gif");
-})
-Mousetrap.bind('H', function() {
-	speakNspell("strangeness");
-	showGif("followYourDreams.gif");
-})
-Mousetrap.bind('J', function() {
-	speakNspell("so", "blue");
-	showGif("nod.gif");
-})
-Mousetrap.bind('K', function() {
-	speakNspell("many", "green");
-	showGif("sparkleLaugh.gif");
-})
-Mousetrap.bind('L', function() {
-	speakNspell("such");
-	showGif("wave.gif");
-})
 Mousetrap.bind('q', function() {
 	speakNspell('let', "blue");
 	showGif('rad.gif')
@@ -192,11 +111,11 @@ Mousetrap.bind('\'', function() {
 	showGif("highFive.gif")
 })
 Mousetrap.bind('z', function() {
-	speakNspell("we", "blue");
+	speakNspell("happy", "blue");
 	showGif("nod.gif");
 })
 Mousetrap.bind('x', function() {
-	speakNspell("find", "green");
+	speakNspell("birthday", "green");
 	showGif("dance2.gif");
 })
 Mousetrap.bind('n', function() {
@@ -212,7 +131,7 @@ Mousetrap.bind(',', function() {
 	showGif("excited.gif");
 })
 Mousetrap.bind('.', function() {
-	speakNspell("do", "white")
+	speakNspell("or", "white")
 	showGif("facepalm.gif")
 })
 Mousetrap.bind('/', function() {
@@ -375,11 +294,11 @@ $(document).ready(function() {
 })
 })
 
-// Mousetrap.bind('shift+r', function () {
-//     var val = $('#editor_js').val();
-//     console.log(val);
-//     eval(val);
-// })
+Mousetrap.bind('shift+r', function () {
+    var val = $('#editor_js').val();
+    console.log(val);
+    eval(val);
+})
 Mousetrap.bindGlobal('shift+space', function () {
     var val = $('#editor_js').val();
     eval(val);
@@ -389,12 +308,12 @@ Mousetrap.bindGlobal('shift+space', function () {
     $('html').focus();
     return false;
 })
-// Mousetrap.bind('shift+e', function() {
-// 	$('#editorDiv').fadeToggle();
-// })
-// Mousetrap.bind('shift+g', function() {
-// 	$('#gifList').fadeToggle();
-// })
+Mousetrap.bind('shift+e', function() {
+	$('#editorDiv').fadeToggle();
+})
+Mousetrap.bind('shift+g', function() {
+	$('#gifList').fadeToggle();
+})
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;

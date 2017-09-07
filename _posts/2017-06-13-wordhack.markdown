@@ -2,7 +2,6 @@
 layout: post
 title:  "WordHack"
 description: A monthly series of talks and performances exploring the intersection of language and technology at Babycastles in NYC that I founded and host.
-date:   2016-12-13 10:51:47 +0530
 img: wordhack.jpg
 categories: [one, two]
 color: "0,100,120"
@@ -15,6 +14,11 @@ I founded WordHack in the summer of 2014 to create a communal space where people
 WordHack happens in NYC on the third thursday of every month at [Babycastles](http://babycastles.com) (137 W 14th St 2nd fl. I host the series and curate it alongside [Claire Donato](http://somanytumbleweeds.com) 
 
 PAST WORDHACKS
+- [7/20/17 WordHack: Installed Closing Reception Feat. Ross Goodwin, Claire Kwong, Martim Galvão and Anastasis Germanidis](https://www.facebook.com/events/797450103754474/)
+- [6/15/17 WordHack: Installed Opening Reception Feat. Angela Washko, Seth Alter, Jenny Goldstick, Natalie Braginsky and Rosa Nussbaum](https://www.facebook.com/events/331243147295118/)
+- [5/18/17 Feat. Isolde Touch, Muslin, [] and A Tribute to Mark Baumer](https://www.facebook.com/events/405705919829170/)
+- [4/20/17 Feat. Jamie Brew, Melanie Hoff, Uncle Vinegar & David Lublin](https://www.facebook.com/events/1414638155273866/)
+- [3/16/17 Feat. Amelia Winger-Bearskin, Vi Khi Nao and David Bering-Porter](https://www.facebook.com/events/1013931788708240/)
 - [2/16/17 Feat. Jhave, Sarah Rothberg, John Cayley and Theadora Walsh](https://www.facebook.com/events/1636334346670558/)
 - [1/19/17 Feat. Nicole He, Angie Waller, Ilana Harris-Babou and Public Science](https://www.facebook.com/events/1765460560441734/)
 - [1/7/17 WordHack West in LA Feat. Lauren McCarthy, Tim Schwartz and Tender Claws](https://www.facebook.com/events/170497000095615/)
@@ -23,6 +27,7 @@ PAST WORDHACKS
 - [10/20/16 Feat. Abe Avnisan, Vivian Charlesworth, Edek Sher and Nandi Loaf](https://www.facebook.com/events/196256427471642/)
 - [9/15/16 Feat. Alejandro Miguel Jusino Crawford, Sal Randolph, Lam Thuy Vo and Kevin Roark Jr.](https://www.facebook.com/events/1676029872716245/)
 - [8/18/16 Feat. Tega Brain, Kate Durbin and Mimi Onuoha](https://www.facebook.com/events/1571932603111131/)
+- [7/23/16 The WordHack Biennial One-Day Conference Feat. Ingrid Burrington, Clonezone, Ramsey Nasser, Useless Press, Caroline Sinders, Ekene Ijeoma, Chris Novello, Mark Baumer and more](https://www.facebook.com/events/1562525747385688/)
 - [6/16/16 Feat. Ben Grosser, Carl Ferrero, Elizaveta Shneyderman, Ansh Patel and Chris Rodley](https://www.facebook.com/events/137936156615456/)
 - [5/19/16 Feat. Clement Valla, Katie Rose Pipkin, Peter Bussigel and Cat Frazier](https://www.facebook.com/events/1178168905550699/)
 - [4/21/16 Feat. Judd Morrissey, Victoria Sobel & Casey Gollan, Nuclear Fishin' and Jónó Mí Ló](https://www.facebook.com/events/1724929464415542/)
