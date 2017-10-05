@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "Contact Me"
-description: <a href="mailto:toddwords@gmail.com">toddwords@gmail.com</a><br><a href="http://twitter.com/toddwords">@toddwords</a><br>
-<a href="/CV/CV.pdf">CV</a> 
+description: <a href="mailto:toddwords@gmail.com">toddwords@gmail.com</a><br><a href="http://twitter.com/toddwords">@toddwords</a><br><a href="/CV/CV.pdf">CV</a> 
 categories: contact
 color: "169,169,50"
 ---
