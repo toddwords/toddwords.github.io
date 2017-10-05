@@ -1,10 +1,17 @@
 <h1>Hello world!!!!</h1>
-
+<button onclick='generate()'>Generate</button>
 <script src='jquery-3.2.1.js'></script>
+<script src='tracery.js'></script>
 <script>
-$(document).ready(function(){
-	$('h1').text('BOOYAH Jquery is here!!!')
-	$('body').append("<h2>Ohhh yeahhh</h2>")
-	$('body').prepend("<h2>Ohhh yeahhh</h2>")
-})
+var grammarObj = {
+	'Sentence' : ['#celebrity# throws #object.a# at Todd'],
+	'celebrity' : ['Kanye West', 'Pamela Anderson', 'Beyonce Knowles', 'Guy Fieri', 'Oprah'],
+	'object' : ['cell phone', 'crystal ball', 'trash can', '$100 bill', 'pogo stick']
+}
+var grammar = tracery.createGrammar(grammarObj)
+function generate(){
+	var t = grammar.flatten('#Sentence#')
+	$('h1').text(t)
+}
+
 </script>
