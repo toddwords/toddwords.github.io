@@ -1,0 +1,28 @@
+<h1>Race for the Galaxy Example</h1>
+<h2>Your desired turns in order are:</h2>
+<div id='yourTurns'></div>
+<h2>Your opponent's desired turns in order are:</h2>
+<div id='oppsTurns'></div>
+
+<button onclick='generate()'>Generate</button>
+<h3>Draw the payoff matrix and recommend a strategy. Note any equilibrium points</h3>
+<script src='../js/jquery.min.js'></script>
+<script>
+	Array.prototype.choice = function(){return this[Math.floor(Math.random() * this.length)]}
+	function generate(){
+		genPhases('#yourTurns')
+		genPhases('#oppsTurns')
+	}
+	function genPhases(selector){
+		$(selector).empty()
+		var phases = ['Explore', 'Develop', 'Settle', 'Consume', 'Produce']
+		for (var i = 0; i < 5; i++) {
+			var phase = phases.choice()
+			phases.splice(phases.indexOf(phase), 1)
+			$(selector).append("<p>"+phase+"</p>")
+		}
+
+	}
+	generate()
+
+</script>
