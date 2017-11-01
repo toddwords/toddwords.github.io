@@ -16,8 +16,8 @@
 	}
 	function genPhases(selector){
 		$(selector).empty()
-		var phases = ['Explore', 'Develop', 'Settle', 'Consume', 'Produce']
-		for (var i = 0; i < 5; i++) {
+		var phases = ['Explore', 'Develop', 'Settle', 'Produce']
+		for (var i = 0; i < 4; i++) {
 			var phase = phases.choice()
 			phases.splice(phases.indexOf(phase), 1)
 			$(selector).append("<p>"+phase+"</p>")
