@@ -5,6 +5,19 @@
 <button onclick='generate()'>Generate</button>
 <h3>Draw the decision tree and recommend a strategy</h3>
 <h4>Reminder, there are no ambassadors in this version of the game</h4>
+<p>Possible actions:</p>
+<ul>
+<li>Income: Take 1 Coin</li>
+<li>Foreign Aid: Take 2 coins</li>
+<li>Coup: Pay 7 coins, kill your opponent</li>
+</ul>
+<p>Possible roles:</p>
+<ul>
+	<li>Duke: gain 3 coins and block foreign aid</li>
+	<li>Assassin: kill opponent for 3 coins</li>
+	<li>Captain: steal two coins. Block another captain</li>
+	<li>Contessa: block assassin</li>
+</ul>
 <script src='../js/jquery.min.js'></script>
 <script>
 	Array.prototype.choice = function(){return this[Math.floor(Math.random() * this.length)]}
