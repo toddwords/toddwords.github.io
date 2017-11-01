@@ -1,0 +1,21 @@
+<h1>Your card is <span id='card'></span></h1>
+<h2>You can <span id='action'></span></h2>
+<h4>You have <span id='yourCoins'></span> coins</h4>
+<h4>Your opponent has <span id='oppCoins'></span> coins</h4>
+<button onclick='generate()'>Generate</button>
+<h3>Draw the decision tree and recommend a strategy</h3>
+<h4>Reminder, there are no ambassadors in this version of the game</h4>
+<script src='../js/jquery.min.js'></script>
+<script>
+	Array.prototype.choice = function(){return this[Math.floor(Math.random() * this.length)]}
+	var cards = [['Duke', 'gain 3 coins and block foreign aid'], ['Assassin', 'kill opponent for 3 coins'], ['Captain', 'steal two coins. Block another captain'], ['Contessa', 'block Assassin']]
+	function generate(){
+		var card = cards.choice()
+		$('#card').text(card[0])
+		$('#action').text(card[1])
+		$('#yourCoins').text(Math.floor(Math.random() * 7).toString())
+		$('#oppCoins').text(Math.floor(Math.random() * 8).toString())
+	}
+	generate()
+
+</script>

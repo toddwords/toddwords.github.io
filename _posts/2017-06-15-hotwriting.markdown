@@ -2,7 +2,6 @@
 layout: post
 title:  "Hotwriting"
 description: My collection of playable digital poems is out now from Instar Books. Get it <a href="http://instarbooks.com/books/hotwriting.html">here</a>
-date:   2016-12-13 10:51:47 +0530
 img: eBearCover2.gif
 categories: [hotwriting, projects]
 color: "35,181,49"
