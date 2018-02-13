@@ -18,6 +18,8 @@ var mid = new Synth();
 var lead = new Synth();
 var bass = new Synth();
 var currLoop;
+var reverb = new p5.Reverb()
+var reverbOn = false;
 var loopSpeed = 200
 var bassADSR = [0.2,0.5,0.6,1.0]
 var ADSR = [0.05,0.2,0.2,0.5]
@@ -192,6 +194,19 @@ function keyPressed(){
 			changePitchSet('pitchSetHira2')
 			changeBGColor('LightPink')
 		}
+		else if(key == '7'){
+			if(!reverbOn){
+				reverb.process(bass.env)
+				reverb.process(mid.env)
+				reverb.process(lead.env)
+				reverbOn = true;
+			} else {
+				reverb.disconnect();
+				reverbOn= false;
+			}
+			
+
+		}
 		else if(key == '8'){
 			loopSpeed *= 1.08
 			ADSR = ADSR.map(x => x * 1.5)
@@ -212,6 +227,11 @@ function keyPressed(){
 			lead.env.setADSR(ADSR[0],ADSR[1],ADSR[2],ADSR[3])
 			playBasic(loopSpeed)
 			console.log(loopSpeed)
+		}
+		else if(key == '0'){
+			bass.counter = 0;
+			mid.counter = 0;
+			lead.counter = 0;
 		}
 	}
 }
