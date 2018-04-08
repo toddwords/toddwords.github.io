@@ -19,6 +19,8 @@ var lead = new Synth();
 var bass = new Synth();
 var currLoop;
 var reverb = new p5.Reverb()
+var revLength = 6;
+var revAmt = 1.5;
 var reverbOn = false;
 var loopSpeed = 200
 var bassADSR = [0.2,0.5,0.6,1.0]
@@ -132,7 +134,7 @@ function changeBGColor(color){
  $('#mid').keyup(function(){
  	if($(this).val().trim().length > 0){
  		mid.basic = $(this).val().trim().split('')
-		mid.osc.amp(0.5)
+		//mid.osc.amp(0.5)
  	}else{
  		mid.basic = [0]
  	}
@@ -196,36 +198,35 @@ function keyPressed(){
 		}
 		else if(key == '7'){
 			if(!reverbOn){
-				reverb.process(bass.env)
-				reverb.process(mid.env)
-				reverb.process(lead.env)
+				reverb.connect()
+				reverb.process(bass.osc, revLength, revAmt)
+				reverb.process(mid.osc, revLength, revAmt)
+				reverb.process(lead.osc, revLength, revAmt)
 				reverbOn = true;
+				changeLoopSpeed(2.25)
+				changeADSR(8)
+				$('#cover').fadeIn()
+
 			} else {
 				reverb.disconnect();
 				reverbOn= false;
+				changeLoopSpeed(1/2.25);
+				changeADSR(1/8);
+				$('#cover').fadeOut()
+
 			}
 			
 
 		}
 		else if(key == '8'){
-			loopSpeed *= 1.08
-			ADSR = ADSR.map(x => x * 1.5)
-			bassADSR = bassADSR.map(x => x * 1.5)
-			bass.env.setADSR(bassADSR[0],bassADSR[1],bassADSR[2],bassADSR[3])
-			mid.env.setADSR(ADSR[0],ADSR[1],ADSR[2],ADSR[3])
-			lead.env.setADSR(ADSR[0],ADSR[1],ADSR[2],ADSR[3])
-			playBasic(loopSpeed)
+			changeADSR(1.5);
+			changeLoopSpeed(1.08);
 
 			console.log(loopSpeed)
 		}
 		else if(key == '9'){
-			loopSpeed = loopSpeed / 1.08
-			ADSR = ADSR.map(x => x / 1.5)
-			bassADSR = bassADSR.map(x => x / 1.5)
-			bass.env.setADSR(bassADSR[0],bassADSR[1],bassADSR[2],bassADSR[3])
-			mid.env.setADSR(ADSR[0],ADSR[1],ADSR[2],ADSR[3])
-			lead.env.setADSR(ADSR[0],ADSR[1],ADSR[2],ADSR[3])
-			playBasic(loopSpeed)
+			changeADSR(1/1.5)
+			changeLoopSpeed(1/1.08);
 			console.log(loopSpeed)
 		}
 		else if(key == '0'){
@@ -234,4 +235,15 @@ function keyPressed(){
 			lead.counter = 0;
 		}
 	}
+}
+function changeLoopSpeed(amt){
+	loopSpeed *= amt
+	playBasic(loopSpeed)
+}
+function changeADSR(amt){
+	ADSR = ADSR.map(x => x * amt)
+	bassADSR = bassADSR.map(x => x * amt)
+	bass.env.setADSR(bassADSR[0],bassADSR[1],bassADSR[2],bassADSR[3])
+	mid.env.setADSR(ADSR[0],ADSR[1],ADSR[2],ADSR[3])
+	lead.env.setADSR(ADSR[0],ADSR[1],ADSR[2],ADSR[3])
 }
