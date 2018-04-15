@@ -1,0 +1,62 @@
+<h1>I DON'T</h1>
+<h3 id="1"></h3>
+<h3 id="2"></h3>
+<h3 id="3"></h3>
+<h3 id="4"></h3>
+<h3 id="5"></h3>
+<h1>LATELY</h1>
+
+<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+<script src='jquery.min.js'>
+</script>
+<script>
+var words = {};
+var dactyls = [];
+$.ajax({
+            url : "words_alpha.txt",
+            dataType: "text",
+            success : function (data) {
+            	data = data.split("\n")
+            	for(var i=0; i<data.length; i++){
+            		words[data[i]] = 1;
+            	}
+            	loadWords();
+            }
+        });
+
+function loadWords(){
+	$.ajax({
+            url : "dactyl.txt",
+            dataType: "text",
+            success : function (data) {
+            	dactyls = data.split("\n")
+                trynaBe()
+                setInterval(trynaBe, 120000)
+                
+            }
+        });
+}
+
+function trynaBe(){
+    $('#1').text(getRandomWordInDict(dactyls))
+    $('#2').text(getRandomWordInDict(dactyls))
+    $('#3').text(getRandomWordInDict(dactyls))
+    $('#4').text(getRandomWordInDict(dactyls))
+    $('#5').text(getRandomWordInDict(dactyls))
+    responsiveVoice.speak("I don't "+$('#1').text() + ", "+$('#2').text() + ", "+$('#3').text() + ", "+$('#4').text() + ", "+$('#5').text() + ", lately.", "UK English Male", {rate: 1, volume: 5});
+}
+function getRandomWordInDict (dactylList) {
+	var word = choice(dactylList).toLowerCase();
+	while(!words[word]){
+		word = choice(dactylList).toLowerCase()
+	}
+	return word;
+
+}
+
+function choice(arr){
+	return arr[Math.floor(Math.random() * arr.length)]
+}
+
+
+</script>
