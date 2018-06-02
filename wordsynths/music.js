@@ -18,7 +18,7 @@ var mid = new Synth();
 var lead = new Synth();
 var bass = new Synth();
 var currLoop;
-var reverb = new p5.Reverb()
+//var reverb = new p5.Reverb()
 var revLength = 6;
 var revAmt = 1.5;
 var reverbOn = false;
@@ -160,6 +160,7 @@ function changeBGColor(color){
   setTimeout(function(){ that.selectionStart = that.selectionEnd = 10000; }, 0);
 });
 function keyPressed(){
+	getAudioContext().resume();
 	if(keyCode == UP_ARROW){
 		if(currInput > 0){currInput--}
 		$('input')[currInput].focus()

@@ -1,3 +1,12 @@
+<style>
+h1 {
+    font-size:4.5em;
+}
+h3 {
+    font-size:3.5em;
+}
+</style>
+
 <h1>I DON'T</h1>
 <h3 id="1"></h3>
 <h3 id="2"></h3>
@@ -43,7 +52,7 @@ function trynaBe(){
     $('#3').text(getRandomWordInDict(dactyls))
     $('#4').text(getRandomWordInDict(dactyls))
     $('#5').text(getRandomWordInDict(dactyls))
-    responsiveVoice.speak("I don't "+$('#1').text() + ", "+$('#2').text() + ", "+$('#3').text() + ", "+$('#4').text() + ", "+$('#5').text() + ", lately.", "UK English Male", {rate: 1, volume: 5});
+    responsiveVoice.speak("I, don't "+$('#1').text() + ", "+$('#2').text() + ", "+$('#3').text() + ", "+$('#4').text() + ", "+$('#5').text() + ", lately.", "UK English Male");
 }
 function getRandomWordInDict (dactylList) {
 	var word = choice(dactylList).toLowerCase();
