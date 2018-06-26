@@ -1,0 +1,527 @@
+<style>
+body {
+  width:90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: Century Gothic;
+  background: linear-gradient(#2f79ef, #c4daff);
+  overflow: hidden;
+}
+img {
+  border-radius:50%;
+}
+h3 {
+  margin-bottom: -10px;
+}
+#lastText{
+  font-size:48px;
+  position:fixed;
+  left:10%;
+  z-index: 1;
+  display: block;
+  text-align:center;
+  width:40%;
+}
+.container {
+  margin-top: 10px;
+  display: flex;                  /* establish flex container */
+  flex-direction: row;            /* default value; can be omitted */
+  flex-wrap: nowrap;              /* default value; can be omitted */
+  justify-content: space-between; /* switched from default (flex-start, see below) */
+  /*background-color: lightyellow;*/
+}
+
+#profile{
+  width:250px;
+}
+.infoBox{
+  margin-left: 50px;
+  margin-top: 15px;
+  font-size: 17px;
+}
+.infoBox p {
+  display:none;
+}
+#cardCase{
+}
+#interests{
+  margin-top:-20px;
+}
+#brands{
+    margin-top:30px;
+}
+.brandCard {
+  display:none;
+  width:120px;
+  height:80px;
+  text-align: center;
+  font-size:14px;
+  margin-top:10px;
+}
+.brandCard img {
+  width:80px;
+
+}
+#graphTitle {
+  /*position:absolute;*/
+  bottom: 10px;
+  text-align:center;
+  /*display: none;*/
+}
+.bar-graph {
+  padding: 0;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: none;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 425px;
+  margin-top: 20px;
+  font-family: Century Gothic;
+  /*position:absolute;*/
+  bottom:0;
+
+}
+
+.bar-graph li {
+  display: block;
+  padding: 1.5625rem 0;
+  position: relative;
+  text-align: center;
+  vertical-align: bottom;
+  border-radius: 4px 4px 0 0;
+  max-width: 20%;
+  height: 100%;
+  margin: 0 1.8% 0 0;
+  -webkit-flex: 1 1 15%;
+      -ms-flex: 1 1 15%;
+          flex: 1 1 15%;
+}
+
+.bar-graph .bar-graph-axis {
+  -webkit-flex: 1 1 8%;
+      -ms-flex: 1 1 8%;
+          flex: 1 1 8%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bar-graph .bar-graph-label {
+  margin: 0;
+  background-color: none;
+  color: #8a8a8a;
+  position: relative;
+}
+
+@media print, screen and (min-width: 40em) {
+  .bar-graph .bar-graph-label:before, .bar-graph .bar-graph-label:after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px dashed #8a8a8a;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 20%;
+  }
+}
+
+@media print, screen and (min-width: 40em) and (min-width: 64em) {
+  .bar-graph .bar-graph-label:before, .bar-graph .bar-graph-label:after {
+    width: 30%;
+  }
+}
+
+@media print, screen and (min-width: 40em) {
+  .bar-graph .bar-graph-label:after {
+    left: auto;
+    right: 0;
+  }
+}
+
+.bar-graph .percent {
+  letter-spacing: 0px;
+  opacity: 0.4;
+  width: 100%;
+  font-size: 0.5rem;
+  position: absolute;
+  top:10px;
+}
+
+@media print, screen and (min-width: 40em) {
+  .bar-graph .percent {
+    font-size: 1.875rem;
+  }
+}
+
+.bar-graph .percent span {
+  font-size: 1.875rem;
+}
+
+.bar-graph .description {
+  font-weight: 800;
+  opacity: 0.5;
+  text-transform: uppercase;
+  width: 100%;
+  bottom: 20px;
+  position: absolute;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+.bar-graph .letter {
+  font-weight: bolder;
+  opacity: 0.5;
+  text-transform: uppercase;
+  width: 100%;
+  bottom: 50px;
+  position: absolute;
+  font-size: 5rem;
+  overflow: hidden;
+}
+
+.bar-graph .bar.primary {
+  border: 1px solid #1779ba;
+  background: linear-gradient(#2196e3, #1779ba 70%);
+}
+
+.bar-graph .bar.secondary {
+  border: 1px solid #767676;
+  background: linear-gradient(#909090, #767676 70%);
+}
+
+.bar-graph .bar.success {
+  border: 1px solid #3adb76;
+  background: linear-gradient(#65e394, #3adb76 70%);
+}
+
+.bar-graph .bar.warning {
+  border: 1px solid #ffae00;
+  background: linear-gradient(#ffbe33, #ffae00 70%);
+}
+
+.bar-graph .bar.alert {
+  border: 1px solid #cc4b37;
+  background: linear-gradient(#d67060, #cc4b37 70%);
+}
+
+
+</style>
+<div id='topRow' class='container'>
+<div id='profile'>
+<img width='250px' height='250px' src='martimSq2.png' id='martimImg' />
+<h2 style='text-align:center'><strong>Martim Galvão</strong></h2>
+</div>
+<div class='infoBox'>
+  <h4>Demographics:</h4>
+<p><strong>Age: 25-34</strong></p>
+<p><strong>Gender: Male</strong></p>
+<p><strong>Residence: New York City, NY</strong></p>
+  </div>
+  <div class='infoBox'>
+    <h4>Key Info:</h4>
+<p><strong>Password Manager Passcode: 42069666</strong></p>
+<p><strong>Recently broke up with girlfriend, Claire</strong></p>
+<p><strong>Pursuing unsuccessful music career</strong></p>
+  </div>
+    <div id='cardCase'>
+  <div id='interests'>
+  <h3>Interests:</h3>
+    <div class='container'>
+      <div class='brandCard'>
+        <img src='muzak.jpg'>
+        <p><strong>Muzak</strong></p>
+      </div>
+      <div class='brandCard'>
+        <img src='fitness.jpg'>
+        <p><strong>Fitness</strong></p>
+      </div>
+      <div class='brandCard pizza'>
+        <img src='pizza.jpg'>
+        <p><strong>Pizza</strong></p>
+      </div>
+      <div class='brandCard skateboard'>
+        <img src='skateboard.JPG'>
+        <p><strong>Skateboard</strong></p>
+      </div>
+    </div>
+  </div>
+  <div id='brands'>
+    <h3>Brand Affinities:</h3>
+    <div class='container'>
+      <div class='brandCard arizona'>
+        <img src='arizona.jpg'>
+        <p><strong>Arizona Iced Tea</strong></p>
+      </div>
+      <div class='brandCard mercedes'>
+        <img src='mercedes.jpeg'>
+        <p><strong>Mercedes Benz</strong></p>
+      </div>
+      <div class='brandCard'>
+        <img src='adidas.jpg'>
+        <p><strong>Adidas</strong></p>
+      </div>
+      <div class='brandCard facebook'>
+        <img src='fb.png'>
+        <p><strong>Facebook</strong></p>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<h1 id='lastText'></h1>
+<img id='uploading' style='position:fixed;z-index: 1;border-radius: 10%; left:43%; top:15%' src='uploading.gif' />
+<ul class="bar-graph">
+  <li class="bar primary" style="height: 40%;" title="40">
+    <div class="percent">40<span>%</span></div>
+    <div class="letter">O</div>
+    <div class="description">Openness</div>
+  </li>
+  <li class="bar secondary" style="height: 33%;" title="33">
+    <div class="percent">33<span>%</span></div>
+    <div class="letter">C</div>
+    <div class="description">Conscientious</div>
+  </li>
+  <li class="bar success" style="height: 42%;" title="42">
+    <div class="percent">42<span>%</span></div>
+    <div class="letter">E</div>
+    <div class="description">Extroversion</div>
+  </li>
+  <li class="bar warning" style="height: 61%;" title="61">
+    <div class="percent">61<span>%</span></div>
+    <div class="letter">A</div>
+    <div class="description">Agreeableness</div>
+  </li>
+  <li class="bar alert" style="height: 53%;" title="53">
+    <div class="percent">53<span>%</span></div>
+    <div class="letter">N</div>
+    <div class="description">Neuroticism</div>
+  </li>
+</ul>
+<h1 id='graphTitle' style='text-align:center'>Psychographic Profile</h1>
+<script
+  src="http://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+  <script src='mousetrap.min.js'></script>
+<script>
+  var valFiles = ['42069666', 'facebook', 'arizona2', 'brokeUp', 'buygift', 'cleanThisPlace', 'cookingClass', 'cutItOut', 'doIt', 'figureItOut', 'figureItOut2', 'skateboard', 'heyVal2', 'heyVal3', 'heyVal4', 'heyVal5', 'imHot', 'learnItalian', 'mercedes', 'orderPizza', 'nicePick', 'orderIt', 'putOnMusic', 'scarface2', 'shush1','stillDoinArt', 'shush2',  'thatsValerie', 'thatsValerie2', 'thinkImCool', 'betterBe', 'what', '500likes', 'whoa1', 'rateYouA5', 'sayMyName', 'insta', 'yes']
+var valAudio = {};
+//var valAudio = [];
+for(var i = 0; i<valFiles.length; i++){
+  //valAudio.push(new Audio("valerie/"+valFiles[i]+'.mp3'))
+  valAudio[valFiles[i]]= new Audio("valerie/"+valFiles[i]+'.mp3')
+}
+// document.onkeydown = function(e){
+//   if(e.which >= 48 && e.which < 100){
+//     console.log(e.which)
+//     var num = e.which;
+//     if(e.which<65){num = e.which+45}
+//     playSound(num-65)
+//     changeBar(choice(['primary','secondary','warning','alert','success']), )
+//   }
+  Mousetrap.bind('q',function(){
+    $('#uploading').remove()
+    $('.infoBox p, .brandCard').show()
+    $('.bar-graph').css('display', 'flex')
+    playSound('heyVal2')
+    $('#lastText').text('Hey Valerie,')
+    changeBar('success', 1)
+  })
+  Mousetrap.bind('w',function(){
+    $('#uploading').remove()
+    $('#lastText').text('Hey Valerie,')
+    playSound('heyVal3')
+    changeBar('alert', 1)
+  })
+  Mousetrap.bind('e',function(){
+    $('#uploading').remove()
+    playSound('heyVal4')
+    $('#lastText').text('Hey Valerie,')
+    changeBar('success', 1)
+  })
+  Mousetrap.bind('r',function(){
+    $('#uploading').remove()
+    playSound('heyVal5')
+    $('#lastText').text('Hey Valerieee')
+    changeBar('secondary', -1)
+  })
+  Mousetrap.bind('t',function(){
+    $('#lastText').text('Do it')
+    playSound('doIt')
+    changeBar('warning', -1)
+  })
+    Mousetrap.bind('y',function(){
+      $('#lastText').text('Shush')
+    playSound('shush1')
+    changeBar('warning', -1)
+  })
+  Mousetrap.bind('u',function(){
+    $('#lastText').text('Clean this place')
+    playSound('cleanThisPlace')
+    changeBar('alert', 1)
+  })
+   Mousetrap.bind('i',function(){
+    $('#lastText').text('Cut it out')
+    playSound('cutItOut')
+    changeBar('warning', -1)
+  })
+    Mousetrap.bind('o',function(){
+    $('#lastText').text('Figure it out')
+    playSound('figureItOut2')
+    changeBar('warning', -1)
+  })
+    Mousetrap.bind('p',function(){
+      $('#lastText').text('Say my name')
+    playSound('sayMyName')
+    changeBar('warning', -1)
+  })
+      Mousetrap.bind('[',function(){
+        $('#lastText').text('Order it')
+    playSound('orderIt')
+    
+  })
+  Mousetrap.bind(']',function(){
+    $('#lastText').text('Do you think I\'m cool?')
+    playSound('thinkImCool')
+    changeBar('alert')
+  })
+   Mousetrap.bind('\\',function(){
+    $('#lastText').text('I\'m hot')
+    playSound('imHot')
+    changeBar('success')
+  })
+  Mousetrap.bind('a',function(){
+    $('#lastText').text('42069666')
+    playSound('42069666')
+  })
+   Mousetrap.bind('s',function(){
+    $('#lastText').text('Oh, yeah, that\'s uh Valerie')
+    playSound('thatsValerie2')
+  })
+  Mousetrap.bind('d',function(){
+    $('#lastText').text('Claire and I broke up a little while ago')
+    playSound('brokeUp')
+    changeBar('success', -1)
+  })
+  Mousetrap.bind('f',function(){
+    $('#lastText').text('Still doin the art thing, still making music')
+    playSound('stillDoinArt')
+    changeBar('secondary')
+  })
+  Mousetrap.bind('g',function(){
+    $('#lastText').text('Nice')
+    playSound('nicePick')
+    changeBar('warning')
+  })
+  Mousetrap.bind('h',function(){
+    $('#lastText').text('What')
+    playSound('what')
+  })
+  Mousetrap.bind('j',function(){
+    $('#lastText').text('Yes')
+    playSound('yes')
+    changeBar('primary')
+  })
+   Mousetrap.bind('k',function(){
+    $('#lastText').text('Whoa')
+    playSound('whoa1')
+    changeBar('primary')
+  })
+   Mousetrap.bind('l',function(){
+    $('#lastText').text('Nice')
+    playSound('nicePick')
+    changeBar('warning')
+  })
+
+  Mousetrap.bind('z',function(){
+    $('#lastText').text('Skateboard')
+    playSound('skateboard')
+    cardAnimate('.skateboard')
+    changeBar('success')
+  })
+  Mousetrap.bind('x',function(){
+    $('#lastText').text('Mercedes Benz')
+    playSound('mercedes')
+    cardAnimate('.mercedes')
+
+  })
+   Mousetrap.bind('c',function(){
+    $('#lastText').text('Arizona Iced Tea')
+    cardAnimate('.arizona')
+    playSound('arizona2')
+  })
+   Mousetrap.bind('v',function(){
+    $('#lastText').text('Order it')
+    playSound('orderIt')
+  })
+   Mousetrap.bind('b',function(){
+    $('#lastText').text('Faceboooook')
+    playSound('facebook')
+    cardAnimate('.facebook')
+
+  })
+   Mousetrap.bind('n',function(){
+    $('#lastText').text('Gonna pick up a pizza')
+    playSound('orderPizza')
+    cardAnimate('.pizza')
+  })
+   Mousetrap.bind('m',function(){
+    $('#lastText').text('Insta')
+    playSound('insta')
+
+  })
+    Mousetrap.bind(',',function(){
+    $('#lastText').text('500 Likes')
+    playSound('500likes')
+  })
+    Mousetrap.bind('.',function(){
+    $('#lastText').text('I wanna take a cooking class')
+    playSound('cookingClass')
+    changeBar('primary')
+    changeBar('alert', -1)
+  })
+    Mousetrap.bind('/',function(){
+    $('#lastText').text('Learn italian fast')
+    playSound('learnItalian')
+    changeBar('success')
+    changeBar('conscientious')
+  })
+
+function changeBar(barClass, mult=1){
+  var currNum = Number($('.'+barClass).attr('title'))
+  var numChange = Math.floor(Math.random() * 6)+1 
+  //if(Math.random()<0.5){numChange*=-1}
+  var num = currNum + numChange * mult
+  $('.'+barClass).animate({'height': num.toString()+"%"},600)
+  $('.'+barClass+" .percent").html(num.toString() + "<span>%</span>")
+  $('.'+barClass).attr('title', num)
+}
+
+function choice(arr){
+  return arr[Math.floor(Math.random()*arr.length)]
+}
+function playSound(clip){
+      var audio = valAudio[clip]
+      //var audio = valAudio[clip]
+      if(audio.currentTime > 0){
+            audio.currentTime = 0;
+            audio.play()
+        }
+      else {
+        audio.play();
+      }
+}
+function cardAnimate(selector){
+  //$(selector).animate({width:'240px'}, 800, function(){$(this).animate({width:'120px'}, 800)})
+  $(selector+' img').animate({width:'160px'}, 800, function(){$(this).animate({width:'80px'}, 800)})
+  $(selector+' p').animate({'font-size':'20px'}, 800, function(){$(this).animate({'font-size':'14px'}, 800)})
+}
+</script>
