@@ -120,8 +120,10 @@ select {
   crossorigin="anonymous"></script>
 <script>
 
-$(document).bind('mousewheel', _.throttle(changeMenu, 200, { trailing: true, leading: true }));
-
+$(document).bind('mousewheel', _.throttle(changeMenu, 700, { trailing: true, leading: true }));
+$('select').change(function(){
+    updateImg($('select')[0].selectedIndex + 1)
+})
 function changeMenu(e){
 	console.log('changing')
 	if(e.originalEvent.wheelDelta /10 > 0) {
