@@ -9,11 +9,15 @@ author: todd
 evergreen: 2
 ---
 
-I founded WordHack in the summer of 2014 to create a communal space where people making language-based digital projects could share their work and meet each other. The format consists of 3-4 presenters giving short talks / performances (~15 mins) and an **Open Projector** where anyone from the audience can sign up to present their work for 5 minutes or less. 
+I founded WordHack in the summer of 2014 to create a communal space where people making language-based digital projects could share their work and meet each other. The format consists of 3-4 presenters giving short talks / performances (~15 mins) and an **Open Projector** where anyone from the audience can sign up to present their work for 5 minutes or less.
 
 WordHack happens in NYC on the third thursday of every month at [Babycastles](http://babycastles.com) (145 W 14th St). I have been hosting and curating the series since July of 2014.
 
 PAST WORDHACKS
+- [9/20/18 Feat. Joanne McNeil, Martin O'Leary & Esther Seyffarth](https://www.facebook.com/events/713754025655700/)
+- [6/21/18 Feat. Zach Lieberman, Oscar Schwartz and Open Projector](https://www.facebook.com/events/647270168957266/)
+- [5/17/18 Feat. Ursula Endlicher, Aarón Montoya-Moraga, and more!](https://www.facebook.com/events/148845942635987/)
+- [4/19/18 Feat. Finn Brunton, Andrew Demirjian and Aaron Petcoff](https://www.facebook.com/events/177904769597922/)
 - [3/15/18 Feat. Jamie Brew, Rachel Haberstroh and Alexis Wright](https://www.facebook.com/events/1795879747381389/)
 - [2/15/18 Feat. Taeyoon Choi & HAWRAF and Nora Khan](https://www.facebook.com/events/1761699120527873/)
 - [1/18/18 Feat. Bill Bly, Fernando Ramallo and Maddy Varner](https://www.facebook.com/events/1976322879273152/)
@@ -57,5 +61,3 @@ PAST WORDHACKS
 - [9/25/14 Feat. Bubblyfish, Hannah Davis, Lee Tusman and Gabriel Loeb](https://www.facebook.com/events/1566033796958481/)
 - [8/22/14 Feat. Nikola Tosic, Miracle Jones, Aiden Arata, Andrew Klobucar and Orion Martin](https://www.facebook.com/events/755620237833151/)
 - [7/11/14 Feat. Carla Gannis, Justin Petropoulos, Jonathan Wohl, Andy Dayton, Todd Anderson, Jonah Galeota-Sprung and Derek Baron](https://www.facebook.com/events/667940996622631/)
-
-
