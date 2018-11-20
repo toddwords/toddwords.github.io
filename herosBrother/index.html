@@ -1,166 +1,49 @@
 <style>
+@font-face {
+font-family: BradHand;
+src: url('audio/BRADHITC.TTF') format('truetype');
+}
 html, body {
-	background-color: black;
-	margin: 0; 
-	height: 100%; 
-	overflow: hidden;
+	background-color: lightblue;
 	color: lightgray;
-}
-select {
-	width:400px;
-	height:50px;
-	font-size: 21px;
-	text-align: center;
 	font-family: Century Gothic;
-	background-color: black;
-	border-radius: 3px;
-	border-color: gray;
-	border-width: 1px;
-	color: lightgray;
-	margin:auto;
-	margin-top: 15px;
-	padding-left: 10px;
-	display:block;
-}
-.container {
-	margin-top: 50px;
-	display: flex;
-	justify-content:center;
+	text-align:center;
+	background-image: url(audio/images/halftone.png);
 }
 .hero-img {
 	display: block;
 	margin:auto;
-	position:absolute;
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
-	height: 80%;
-	/*max-width:95%;*/
-	width:auto;
+	max-height: 60%;
+	width:80%;
+	margin-bottom: 25px;
 	/*height:auto;*/
 
 }
-.hidden {
-	display:none;
+#main{
+	display: block;
+	width:500px;
+	margin:auto;
+	/*background-color: rgba(45,240,37,0.3);*/
+	/*border-radius: 5px;*/
+	padding:15px;
+}
+h1 {
+	color: red;
+	font-family: BradHand;
+}
+h3 {
+	margin-top: 3vh;
+}
+h3 span {
+	font-weight: normal;
+    color: black;
+    font-size: 0.8em;
+    line-height: 30px;
 }
 </style>
-<select>
-<option>01 - Conall</option>
-<option>02 - Confessor Guthlac’s Pupil </option>
-<option>03 - Ye Olde </option>
-<option>04 - Nine Men’s Morris</option>
-<option>05 - The Singing Gamester </option>
-<option>06 - One on One </option>
-<option>07 - A Staggering Blow</option>
-<option>08 - And Back Again </option>
-<option>09 - The Boon </option>
-<option>10 - To a Manor Borne </option>
-<option>11 - Defective</option>
-<option>12 - The Expected Shipwreck </option>
-<option>13 - No Such Thing as a Free Lunch </option>
-<option>14 - Who Had What? </option>
-<option>15 - Let the Games Begin </option>
-<option>16 - In the Wee Hours </option>
-<option>17 - The Battle Cry </option>
-<option>18 - Never a Cold Shoulder</option>
-<option>19 - Summer’s Discontents </option>
-<option>20 - Taking the Lead </option>
-<option>21 - An Awkward Suit </option>
-<option>22 - A Motley Crew </option>
-<option>23 - Remembrance of Desserts Past </option>
-<option>24 - The Head Mark </option>
-<option>25 - The Wright Thing </option>
-<option>26 - Casting Aspersions </option>
-<option>27 - Hell on the Ninth of the Circle </option>
-<option>28 - Stopping Short </option>
-<option>29 - Only Connecting </option>
-<option>30 - The Tors of the Decoray </option>
-<option>31 - A Balancing Act </option>
-<option>32 - No Blessing in Disguise </option>
-<option>33 - The Prized Prisoner </option>
-<option>34 - A Deadly Conspiracy </option>
-<option>35 - A Diminished Seventh </option>
-<option>36 - True Visions at the Horn Gate </option>
-<option>37 - Twenty Seconds </option>
-<option>38 - The Grain Exchange </option>
-<option>39 - The Narrow Tower </option>
-<option>40 - Wasting Away </option>
-<option>41 - Bedlam </option>
-<option>42 - Keeping a Low Low Profile </option>
-<option>43 - With the Forty-Seven </option>
-<option>44 - In Their Cups </option>
-<option>45 - Noman is an Island </option>
-<option>46 - Cutting to the Chase </option>
-<option>47 - Can You Go Home Again? </option>
-<option>48 - The Tax Dodger </option>
-<option>49 - Safe for a Spell </option>
-<option>50 - Patent Filings </option>
-<option>51 - Circling the Square </option>
-<option>52 - Darkness Invisible </option>
-<option>53 - All Together Now </option>
-<option>54 - The Slender Black Sail </option>
-<option>55 - Brothers </option>
-<option>56 - The Song of Selflessness </option>
-<option>57 - The Brother’s Hero </option>
-<option>58 - Penultimatum </option>
-<option>59 - Last Chapter </option>
-<option>60 - The Chapter After the Last Chapter </option>
-</select>
-<div class = 'container'>
-	<div id='heroImgDiv'>
-		<img class='hero-img visible' src='images/HBcitadel2.jpg' />
-		<img class='hero-img hidden' src='images/HBcitadel2.jpg' />
-	</div>
+<div id ='main'>
+<h3><a href='/audio'>Audiobook Extras</a><br><span >(pictures, maps and key texts)</span></h3> 
+<img class='hero-img' src='audio/images/HBcitadel2.jpg' />
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/478812696&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.10/lodash.min.js"></script>
-<script
-  src="http://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
-<script>
-
-$(document).bind('mousewheel', _.throttle(changeMenu, 700, { trailing: true, leading: true }));
-$('select').change(function(){
-    updateImg($('select')[0].selectedIndex + 1)
-})
-function changeMenu(e){
-	console.log('changing')
-	if(e.originalEvent.wheelDelta /10 > 0) {
-            console.log('scrolling up !');
-			$('select')[0].selectedIndex--;
-
-        }
-        else{
-			$('select')[0].selectedIndex++;
-            console.log('scrolling down !');
-        }
-    updateImg($('select')[0].selectedIndex + 1)
-
-}
-function updateImg(chapterNum){
-	if(chapterNum == 1){
-		swapImg('HBcitadel2.jpg')
-	}
-	if(chapterNum == 4){
-		swapImg('nmm.jpg')
-	}
-	if(chapterNum == 8){
-		swapImg('litchgateTree.jpg')
-	}
-	if(chapterNum == 9){
-		swapImg('litchgateCage.jpg')
-	}
-	if(chapterNum == 11){
-		swapImg('autumnFragment.png')
-	}
-	if(chapterNum == 19){
-		swapImg('summerFragment.png')
-	}
-}
-
-function swapImg(fileName){
-	$('img.visible').fadeOut(800,function(){$(this).removeClass('visible').addClass('hidden')})
-	$('img.hidden').attr('src', 'images/'+fileName).fadeIn(800,function(){$(this).removeClass('hidden').addClass('visible')})
-}
-</script>

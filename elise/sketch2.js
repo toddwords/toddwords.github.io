@@ -34,11 +34,11 @@ function setup(){
   else{side = width}
   // loadAndPlay(geicoClips)
 	amp = new p5.Amplitude();
-	reverb = new p5.Reverb();
+	//reverb = new p5.Reverb();
   	// voice.disconnect()
   	// voice.connect(distortion)
   for (var i = 0; i < playlist.length; i++) {
-    reverb.process(playlist[i],1.5,5)
+    //reverb.process(playlist[i],1.5,5)
     playlist[i].onended(playNext)
   }
     playNext();

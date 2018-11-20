@@ -34,7 +34,7 @@ String.prototype.regexLastIndexOf = function(regex, startpos) {
     return lastIndexOf;
 }
 // An object that generates text with markov-chains at the character level
-function MarkovGenerator(n, max, separator="\n", trim=false) {
+function MarkovGeneratorChar(n, max, separator="\n", trim=false) {
   // Order (or length) of each ngram
   this.n = n;
   // What is the maximum amount we will generate?
