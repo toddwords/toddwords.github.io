@@ -17,27 +17,6 @@ function preload() {
   spaceImg = loadImage("spaceSave.png");
   arrowImg = loadImage("rateVolume.png");
   audiowide = loadFont("fonts/audiowide.ttf")
-}
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-  noFill();
-
-  fft = new p5.FFT();
-
-    // create an audio in
-  mic = new p5.AudioIn();
-
-  // users must manually enable their browser microphone for recording to work properly!
-  mic.start();
-
-  // create a sound recorder
-  recorder = new p5.SoundRecorder();
-  beatRecorder = new p5.SoundRecorder();
-  // connect the mic to the recorder
-  recorder.setInput(mic);
-  beatRecorder.setInput();
-
-  // create an empty sound file that we will use to playback the recording
   soundFileQ = new p5.SoundFile();
   soundFileW = new p5.SoundFile();
   soundFileE = new p5.SoundFile();
@@ -49,6 +28,14 @@ function setup() {
   soundFileO = new p5.SoundFile();
   soundFileP = new p5.SoundFile();
   beatFile = new p5.SoundFile();
+  recorder = new p5.SoundRecorder();
+  beatRecorder = new p5.SoundRecorder();
+}
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  noFill();
+
+ initAudio();
 
 }
 
@@ -93,215 +80,218 @@ function draw() {
 }
 
 function keyTyped(){
-	if(tutorial > 0 && key != " "){introCheck(key)}
-	if(!firstKey){
-		firstKey = true
-		var elem = document.getElementById('about');
-    	elem.parentNode.removeChild(elem);
-	}
-	if(keyCode == 13 ){if(tutorial < 0){tutorial = 0;txt = "Press and hold Shift + any letters in the top row on the keyboard to record a sound (a mic is required). Recording stops when you let go.\n(Press Enter to close tutorial, or Click to skip ahead)"}else{tutorial = -1;currImg = recordImg}}
-	if(key == " "){
-		beatRecorder.record(beatFile);
-		bgColor = 150;
-	}
-	if(key == "Q"){
-		recorder.record(soundFileQ);
-		bgColor = 100;
-	}
-	if(key == "W"){
-		recorder.record(soundFileW);
-		bgColor = 100;
-	}
-	if(key == "E"){
-		recorder.record(soundFileE);
-		bgColor = 100;
-	}
-	if(key == "R"){
-		recorder.record(soundFileR);
-		bgColor = 100;
-	}
-	if(key == "T"){
-		recorder.record(soundFileT);
-		bgColor = 100;
-	}
-	if(key == "Y"){
-		recorder.record(soundFileY);
-		bgColor = 100;
-	}
-	if(key == "U"){
-		recorder.record(soundFileU);
-		bgColor = 100;
-	}
-	if(key == "I"){
-		recorder.record(soundFileI);
-		bgColor = 100;
-	}
-	if(key == "O"){
-		recorder.record(soundFileO);
-		bgColor = 100;
-	}
-	if(key == "P"){
-		recorder.record(soundFileP);
-		bgColor = 100;
-	}
-	if(key == "q"){
-		soundFileQ._looping = false;
-		soundFileQ.play(0,r,a);
-	}
-	if(key == "w"){
-		soundFileW._looping = false;
-		soundFileW.play(0,r,a);
-	}
-	if(key == "e"){
-		soundFileE._looping = false;
-		soundFileE.play(0,r,a);
-	}
-	if(key == "r"){
-		soundFileR._looping = false;
-		soundFileR.play(0,r,a);
-	}
-	if(key == "t"){
-		soundFileT._looping = false;
-		soundFileT.play(0,r,a);
-	}
-	if(key == "y"){
-		soundFileY._looping = false;
-		soundFileY.play(0,r,a);
-	}
-	if(key == "u"){
-		soundFileU._looping = false;
-		soundFileU.play(0,r,a);
-	}
-	if(key == "i"){
-		soundFileI._looping = false;
-		soundFileI.play(0,r,a);
-	}
-	if(key == "o"){
-		soundFileO._looping = false;
-		soundFileO.play(0,r,a);
-	}
-	if(key == "p"){
-		soundFileP._looping = false;
-		soundFileP.play(0,r,a);
-	}
-	if(key == "a"){
-		soundFileQ.loop(0,r,a);
-	}
-	if(key == "A"){
-		soundFileQ.stop();
-	}
-	if(key == "s"){
-		soundFileW.loop(0,r,a);
-	}
-	if(key == "S"){
-		soundFileW.stop();
-	}
-	if(key == "d"){
-		soundFileE.loop(0,r,a);
-	}
-	if(key == "D"){
-		soundFileE.stop();
-	}
-	if(key == "f"){
-		soundFileR.loop(0,r,a);
-	}
-	if(key == "F"){
-		soundFileR.stop();
-	}
-	if(key == "g"){
-		soundFileT.loop(0,r,a);
-	}
-	if(key == "G"){
-		soundFileT.stop();
-	}
-	if(key == "h"){
-		soundFileY.loop(0,r,a);
-	}
-	if(key == "H"){
-		soundFileY.stop();
-	}
-	if(key == "j"){
-		soundFileU.loop(0,r,a);
-	}
-	if(key == "J"){
-		soundFileU.stop();
-	}
-	if(key == "k"){
-		soundFileI.loop(0,r,a);
-	}
-	if(key == "K"){
-		soundFileI.stop();
-	}
-	if(key == "l"){
-		soundFileO.loop(0,r,a);
-	}
-	if(key == "L"){
-		soundFileO.stop();
-	}
-	if(key == ";"){
-		soundFileP.loop(0,r,a);
-	}
-	if(key == ":"){
-		soundFileP.stop();
-	}
-	if(key == "z"){
-		soundFileQ.pause();
-		setTimeout(function(){soundFileQ.loop(0,r,a,0);},10)
-	}
-	if(key == "x"){
-		soundFileW.pause();
-		setTimeout(function(){soundFileW.loop(0,r,a,0);},10)
-	}
-	if(key == "c"){
-		soundFileE.pause();
-		setTimeout(function(){soundFileE.loop(0,r,a,0);},10)
-	}
-	if(key == "v"){
-		soundFileR.pause();
-		setTimeout(function(){soundFileR.loop(0,r,a,0);},10)
-	}
-	if(key == "b"){
-		soundFileT.pause();
-		setTimeout(function(){soundFileT.loop(0,r,a,0);},10)
-	}
-	if(key == "n"){
-		soundFileY.pause();
-		setTimeout(function(){soundFileY.loop(0,r,a,0);},10)
-	}
-	if(key == "m"){
-		soundFileU.pause();
-		setTimeout(function(){soundFileU.loop(0,r,a,0);},10)
-	}
-	if(key == ","){
-		soundFileI.pause();
-		setTimeout(function(){soundFileI.loop(0,r,a,0);},10)
-	}
-	if(key == "."){
-		soundFileO.pause();
-		setTimeout(function(){soundFileO.loop(0,r,a,0);},10)
-	}
-	if(key == "/"){
-		soundFileP.pause();
-		setTimeout(function(){soundFileP.loop(0,r,a,0);},10)
-	}
-	if(key == "-"){
-		masterVolume(0, 10);
-	}
-	if(key == "_"){
-		masterVolume(1);
-	}
-	if(key == "="){
-		soundFileQ.stop();
-		soundFileW.stop();
-		soundFileE.stop();
-		soundFileR.stop();
-		soundFileT.stop();
-		soundFileY.stop();
-		soundFileU.stop();
-		soundFileI.stop();
-		soundFileO.stop();
-		soundFileP.stop();
-	}
+	getAudioContext().resume().then(() => {
+		initAudio()
+		if(tutorial > 0 && key != " "){introCheck(key)}
+		if(!firstKey){
+			firstKey = true
+			var elem = document.getElementById('about');
+	    	elem.parentNode.removeChild(elem);
+		}
+		if(keyCode == 13 ){if(tutorial < 0){tutorial = 0;txt = "Press and hold Shift + any letters in the top row on the keyboard to record a sound (a mic is required). Recording stops when you let go.\n(Press Enter to close tutorial, or Click to skip ahead)"}else{tutorial = -1;currImg = recordImg}}
+		if(key == " "){
+			beatRecorder.record(beatFile);
+			bgColor = 150;
+		}
+		if(key == "Q"){
+			recorder.record(soundFileQ);
+			bgColor = 100;
+		}
+		if(key == "W"){
+			recorder.record(soundFileW);
+			bgColor = 100;
+		}
+		if(key == "E"){
+			recorder.record(soundFileE);
+			bgColor = 100;
+		}
+		if(key == "R"){
+			recorder.record(soundFileR);
+			bgColor = 100;
+		}
+		if(key == "T"){
+			recorder.record(soundFileT);
+			bgColor = 100;
+		}
+		if(key == "Y"){
+			recorder.record(soundFileY);
+			bgColor = 100;
+		}
+		if(key == "U"){
+			recorder.record(soundFileU);
+			bgColor = 100;
+		}
+		if(key == "I"){
+			recorder.record(soundFileI);
+			bgColor = 100;
+		}
+		if(key == "O"){
+			recorder.record(soundFileO);
+			bgColor = 100;
+		}
+		if(key == "P"){
+			recorder.record(soundFileP);
+			bgColor = 100;
+		}
+		if(key == "q"){
+			soundFileQ._looping = false;
+			soundFileQ.play(0,r,a);
+		}
+		if(key == "w"){
+			soundFileW._looping = false;
+			soundFileW.play(0,r,a);
+		}
+		if(key == "e"){
+			soundFileE._looping = false;
+			soundFileE.play(0,r,a);
+		}
+		if(key == "r"){
+			soundFileR._looping = false;
+			soundFileR.play(0,r,a);
+		}
+		if(key == "t"){
+			soundFileT._looping = false;
+			soundFileT.play(0,r,a);
+		}
+		if(key == "y"){
+			soundFileY._looping = false;
+			soundFileY.play(0,r,a);
+		}
+		if(key == "u"){
+			soundFileU._looping = false;
+			soundFileU.play(0,r,a);
+		}
+		if(key == "i"){
+			soundFileI._looping = false;
+			soundFileI.play(0,r,a);
+		}
+		if(key == "o"){
+			soundFileO._looping = false;
+			soundFileO.play(0,r,a);
+		}
+		if(key == "p"){
+			soundFileP._looping = false;
+			soundFileP.play(0,r,a);
+		}
+		if(key == "a"){
+			soundFileQ.loop(0,r,a);
+		}
+		if(key == "A"){
+			soundFileQ.stop();
+		}
+		if(key == "s"){
+			soundFileW.loop(0,r,a);
+		}
+		if(key == "S"){
+			soundFileW.stop();
+		}
+		if(key == "d"){
+			soundFileE.loop(0,r,a);
+		}
+		if(key == "D"){
+			soundFileE.stop();
+		}
+		if(key == "f"){
+			soundFileR.loop(0,r,a);
+		}
+		if(key == "F"){
+			soundFileR.stop();
+		}
+		if(key == "g"){
+			soundFileT.loop(0,r,a);
+		}
+		if(key == "G"){
+			soundFileT.stop();
+		}
+		if(key == "h"){
+			soundFileY.loop(0,r,a);
+		}
+		if(key == "H"){
+			soundFileY.stop();
+		}
+		if(key == "j"){
+			soundFileU.loop(0,r,a);
+		}
+		if(key == "J"){
+			soundFileU.stop();
+		}
+		if(key == "k"){
+			soundFileI.loop(0,r,a);
+		}
+		if(key == "K"){
+			soundFileI.stop();
+		}
+		if(key == "l"){
+			soundFileO.loop(0,r,a);
+		}
+		if(key == "L"){
+			soundFileO.stop();
+		}
+		if(key == ";"){
+			soundFileP.loop(0,r,a);
+		}
+		if(key == ":"){
+			soundFileP.stop();
+		}
+		if(key == "z"){
+			soundFileQ.pause();
+			setTimeout(function(){soundFileQ.loop(0,r,a,0);},10)
+		}
+		if(key == "x"){
+			soundFileW.pause();
+			setTimeout(function(){soundFileW.loop(0,r,a,0);},10)
+		}
+		if(key == "c"){
+			soundFileE.pause();
+			setTimeout(function(){soundFileE.loop(0,r,a,0);},10)
+		}
+		if(key == "v"){
+			soundFileR.pause();
+			setTimeout(function(){soundFileR.loop(0,r,a,0);},10)
+		}
+		if(key == "b"){
+			soundFileT.pause();
+			setTimeout(function(){soundFileT.loop(0,r,a,0);},10)
+		}
+		if(key == "n"){
+			soundFileY.pause();
+			setTimeout(function(){soundFileY.loop(0,r,a,0);},10)
+		}
+		if(key == "m"){
+			soundFileU.pause();
+			setTimeout(function(){soundFileU.loop(0,r,a,0);},10)
+		}
+		if(key == ","){
+			soundFileI.pause();
+			setTimeout(function(){soundFileI.loop(0,r,a,0);},10)
+		}
+		if(key == "."){
+			soundFileO.pause();
+			setTimeout(function(){soundFileO.loop(0,r,a,0);},10)
+		}
+		if(key == "/"){
+			soundFileP.pause();
+			setTimeout(function(){soundFileP.loop(0,r,a,0);},10)
+		}
+		if(key == "-"){
+			masterVolume(0, 10);
+		}
+		if(key == "_"){
+			masterVolume(1);
+		}
+		if(key == "="){
+			soundFileQ.stop();
+			soundFileW.stop();
+			soundFileE.stop();
+			soundFileR.stop();
+			soundFileT.stop();
+			soundFileY.stop();
+			soundFileU.stop();
+			soundFileI.stop();
+			soundFileO.stop();
+			soundFileP.stop();
+		}
+	})
 
 }
 function keyReleased(){
@@ -404,6 +394,7 @@ function introCheck(key){
 }
 
 function mousePressed(){
+	getAudioContext().resume()
 	if(tutorial > -1){
 		var currText = txt
 		while(txt == currText){
@@ -415,4 +406,23 @@ function mousePressed(){
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+}
+
+function initAudio(){
+  fft = new p5.FFT();
+
+    // create an audio in
+  mic = new p5.AudioIn();
+
+  // users must manually enable their browser microphone for recording to work properly!
+  mic.start();
+
+  // create a sound recorder
+  
+  // connect the mic to the recorder
+  recorder.setInput(mic);
+  beatRecorder.setInput();
+
+  // create an empty sound file that we will use to playback the recording
+  
 }
