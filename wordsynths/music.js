@@ -18,7 +18,7 @@ var mid = new Synth();
 var lead = new Synth();
 var bass = new Synth();
 var currLoop;
-//var reverb = new p5.Reverb()
+var reverb = new p5.Reverb()
 var revLength = 6;
 var revAmt = 1.5;
 var reverbOn = false;
@@ -81,8 +81,9 @@ function Synth(){
  	this.osc.setType('triangle')
  	this.osc.amp(0)
  	this.osc.start()
- 	this.env = new p5.Env()
-	this.env.setADSR(0.05,0.2,0.2,0.5)
+ 	this.env = new p5.Envelope()
+	this.env.setADSR(ADSR[0],ADSR[1],ADSR[2],ADSR[3])
+	this.env.setRange(1.0,0.0)
 	this.octave = 1
 	this.counter = 0
 	this.basic = [0]
@@ -173,31 +174,33 @@ function keyPressed(){
 	}
 
 	else if(keyIsDown(SHIFT) && keyIsDown(CONTROL)){
-		if(key == '1'){
+		console.log("test");
+		if(key == '!'){
+			console.log("test1");
 			changePitchSet('pitchSet1')
 			changeBGColor('White')
 		}
-		else if(key == '2'){
+		else if(key == '@'){
 			changePitchSet('pitchSet2')
 			changeBGColor('LightSkyBlue')
 		}
-		else if(key == '3'){
+		else if(key == '#'){
 			changePitchSet('pitchSetMinor')
 			changeBGColor('DarkGray')
 		}
-		else if(key == '4'){
+		else if(key == '$'){
 			changePitchSet('pitchSetEnig')
 			changeBGColor('Plum')
 		}
-		else if(key == '5'){
+		else if(key == '%'){
 			changePitchSet('pitchSetHira')
 			changeBGColor('LightSalmon')
 		}
-		else if(key == '6'){
+		else if(key == '^'){
 			changePitchSet('pitchSetHira2')
 			changeBGColor('LightPink')
 		}
-		else if(key == '7'){
+		else if(key == '&'){
 			if(!reverbOn){
 				reverb.connect()
 				reverb.process(bass.osc, revLength, revAmt)
@@ -219,18 +222,18 @@ function keyPressed(){
 			
 
 		}
-		else if(key == '8'){
+		else if(key == '*'){
 			changeADSR(1.5);
 			changeLoopSpeed(1.08);
 
 			console.log(loopSpeed)
 		}
-		else if(key == '9'){
+		else if(key == '('){
 			changeADSR(1/1.5)
 			changeLoopSpeed(1/1.08);
 			console.log(loopSpeed)
 		}
-		else if(key == '0'){
+		else if(key == ')'){
 			bass.counter = 0;
 			mid.counter = 0;
 			lead.counter = 0;
