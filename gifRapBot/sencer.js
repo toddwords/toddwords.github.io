@@ -8,75 +8,75 @@ var sounds = {};
 
 
 Mousetrap.bind('q', function() {
-	speakNspell('let', "blue");
+	speakNspell('some thoughts on pedagogy', "blue");
 	showGif('rad.gif')
 })
 
 Mousetrap.bind('w', function() {
-	speakNspell('me', "green");
-	showGif('smile.gif')
+	speakNspell('modify first, build from scratch later', "green");
+	showGif('crushSelf.gif')
 })
 
 Mousetrap.bind('e', function() {
-	speakNspell('tell');
+	speakNspell('examples that illustrate what\'s possible');
 	showGif("blowmind.gif");
 })
 
 Mousetrap.bind('r', function() {
-	speakNspell("you");
-	showGif("couch.gif");
+	speakNspell("using technology with the goals of art");
+	showGif("sparkleLaugh.gif");
 })
 
 Mousetrap.bind('t', function() {
-	speakNspell("a", "green");
-	showGif("shaqdance.gif");
+	speakNspell("no efficiency", "red");
+	showGif("no.gif");
 })
 
 Mousetrap.bind('y', function() {
-	speakNspell("secret", "orange");
-	showGif("money.gif");
+	speakNspell("no scalability", "red");
+	showGif("skull.gif");
 })
 
 Mousetrap.bind('u', function() {
-	speakNspell("about", "purple");
-	showGif("whoa.gif");
+	speakNspell("no abstraction", "red");
+	showGif("skeptical.gif");
 })
 Mousetrap.bind('i', function() {
-	speakNspell("your");
-	showGif("couch.gif");
+	speakNspell("no professionalism", "red");
+	showGif("facepalm.gif");
 })
 Mousetrap.bind('o', function() {
-	speakNspell("dad", "orange");
-	showGif("seals.gif");
+	speakNspell("using technology to make things people can love", "green");
+	showGif("excited.gif");
 })
 Mousetrap.bind('p', function() {
-	speakNspell("my");
-	showGif("smile.gif");
+	speakNspell("that lighten the weight of existence");
+	showGif("sadDolphin.gif");
 })
 
 Mousetrap.bind('a', function() {
-	speakNspell("what");
-	showGif("think.gif");
+	speakNspell("art is for other people", "green");
+	showGif("dance2.gif");
 })
 Mousetrap.bind('s', function() {
-	speakNspell("are");
-	showGif("scream.gif");
+	speakNspell("show it to them", "green");
+	showGif("dance2.gif");
 })
 Mousetrap.bind('d', function() {
-	speakNspell("afraid");
-	showGif("wink.gif");
-})
-Mousetrap.bind('f', function() {
-	speakNspell("of");
+	speakNspell("(all projects as easily accessible websites)");
 	showGif("shaqdance.gif");
 })
+Mousetrap.bind('f', function() {
+	speakNspell("what is the project only you can make?", "blue");
+	showGif("ambition.gif");
+})
 Mousetrap.bind('g', function() {
-	speakNspell("is");
-	showGif("scream.gif");
+	speakNspell("all these things are out there, what will your practice be?", "blue");
+	showGif("followYourDreams.gif");
 })
 Mousetrap.bind('h', function() {
-	speakNspell("life");
-	showGif("followYourDreams.gif");
+	speakNspell("THANK YOU");
+	showGif("wave.gif");
 })
 Mousetrap.bind('j', function() {
 	speakNspell("boring", "blue");
@@ -286,7 +286,7 @@ $(document).ready(function() {
     eval(val);
 })
    $.ajax({
-   url : "main.js",
+   url : "sencer.js",
    dataType: "text",
    success : function (data) {
        $("#editor_js").text(data);
