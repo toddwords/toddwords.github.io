@@ -85,7 +85,7 @@ function draw(){
 }
 
 function mouseClicked(){
-  if(!hasClicked){audioContext.resume()}
+  if(!hasClicked){audioContext.resume(); hasClicked = true}
 	else{window.parent.location.href= currAd.link;}
 }
 function playNext(){
