@@ -21,6 +21,9 @@ var playlist = [];
 var side;
 var Things = [];
 var playCounter = 0;
+var cnv;
+var hasClicked = false;
+var audioContext = new AudioContext();
 function preload(){
   playlist = loadClips(clips)
   for (var i = 0; i < images.length; i++) {
@@ -28,7 +31,8 @@ function preload(){
   }
 }
 function setup(){
-	createCanvas(windowWidth,windowHeight)
+	cnv = createCanvas(windowWidth,windowHeight)
+  cnv.mouseOver(function(){audioContext= getAudioContext();audioContext.resume()});
 	noFill();
   if(width >= height){side = height}
   else{side = width}
@@ -81,7 +85,8 @@ function draw(){
 }
 
 function mouseClicked(){
-	window.parent.location.href= currAd.link;
+  if(!hasClicked){audioContext.resume()}
+	else{window.parent.location.href= currAd.link;}
 }
 function playNext(){
   playlist[playCounter].play()
