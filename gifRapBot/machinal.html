@@ -1,0 +1,95 @@
+<html>
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+<script src="../jquery-1.11.1.min.js"></script>
+<script src="../mousetrap.min.js"></script>
+<script src="lib/globalBind.js"></script>
+<script src="lib/mespeak.full.js"></script>
+<script>if (window.module) module = window.module;</script>
+<script id="mainJS" src="machinal.js"></script>
+<style>h1{font-size:140px; text-align: center; margin: 100px 15%; width:70%; font-family: Century Gothic, sans-serif; text-shadow: #111 5px 4px}
+html { 
+	overflow:hidden;
+	background-color:black;
+/*  background: url("gifs/rad.gif") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+}
+video {
+position: fixed;
+top: 50%;
+left: 50%;
+/*min-width: 100%;*/
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -100;
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+background-size: contain;
+display:none;
+}
+</style>
+<video id="bgvid">
+<source src="machinal.webm" type="video/mp4">
+</video>
+<h1></h1>
+<textarea id="gifList" style="float:right; width:25%; display:none" rows="25">
+list of available gifs:
+ambition.gif
+blowmind.gif
+chewie.gif
+couch.gif
+crushSelf.gif
+dance.gif
+dance2.gif
+danceKid.gif
+excited.gif
+facepalm.gif
+followYourDreams.gif
+fuckYeah.gif
+giflist.txt
+gotcha.gif
+highFive.gif
+huh.gif
+iheartu.gif
+missionAccomplished.gif
+money.gif
+no.gif
+nod.gif
+ohBoy.gif
+ohYeah.gif
+party.gif
+popcorn.gif
+rad.gif
+sadDolphin.gif
+scream.gif
+seals.gif
+shaqdance.gif
+showdown.gif
+skeptical.gif
+skull.gif
+smile.gif
+sparkleLaugh.gif
+spiderHelmet.gif
+sports.gif
+surprise.gif
+think.gif
+typing.gif
+want.gif
+wave.gif
+whoa.gif
+why.gif
+wink.gif
+wizard.gif
+wow.gif
+wrong.gif
+</textarea>
+<div id="editorDiv" style="display:none">
+<textarea id="editor_js" rows="40" style="width:35%;">
+</textarea>
+<input id="butttn" type="button" value="run">
+</div>
+
+</html>

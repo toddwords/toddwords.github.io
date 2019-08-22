@@ -1,4 +1,4 @@
-var names = ['Deni', 'Margaux', 'Zein', 'Victoria', 'Brea', 'Arcinello', 'Jo', 'Darren', 'Macy', 'Shannon','Liam']
+var names = ['Lu', 'Julian', 'Dana', 'Munro', 'Tess', 'Michelle Y']
 names = shuffle(names);
 for (var i = 0; i < names.length; i++) {
 	console.log(names[i])

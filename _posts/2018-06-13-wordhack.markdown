@@ -6,7 +6,6 @@ img: wordhack.jpg
 categories: [one, two]
 color: "0,100,120"
 author: todd
-evergreen: 2
 ---
 
 I founded WordHack in the summer of 2014 to create a communal space where people making language-based digital projects could share their work and meet each other. The format consists of 3-4 presenters giving short talks / performances (~15 mins) and an **Open Projector** where anyone from the audience can sign up to present their work for 5 minutes or less.

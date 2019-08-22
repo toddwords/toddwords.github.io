@@ -258,7 +258,7 @@ h3 {
     <div class='container'>
       <div class='brandCard arizona'>
         <img src='arizona.jpg'>
-        <p><strong>Arizona Iced Tea</strong></p>
+        <p><strong>Arizona</strong></p>
       </div>
       <div class='brandCard mercedes'>
         <img src='mercedes.jpeg'>
@@ -494,6 +494,12 @@ for(var i = 0; i<valFiles.length; i++){
     changeBar('success')
     changeBar('conscientious')
   })
+    Mousetrap.bind("space", function(){
+      $('#uploading').remove()
+    $('.infoBox p, .brandCard').show()
+    $('.bar-graph').css('display', 'flex')
+    $('#lastText').text('Interested in: Products for Men')
+    })
 
 function changeBar(barClass, mult=1){
   var currNum = Number($('.'+barClass).attr('title'))

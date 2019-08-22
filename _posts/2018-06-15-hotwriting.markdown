@@ -6,7 +6,7 @@ img: eBearCover2.gif
 categories: [hotwriting, projects]
 color: "35,181,49"
 author: todd
-evergreen: 1
+evergreen: 2
 xLink: http://instarbooks.com/books/hotwriting.html
 ---
 Hotwriting is a cross-platform (PC/MAC/Linux) book of poems you can play and perform. You can do things like take a poetry solo in a James Brown Song, make Steve Ballmer yell developers, and try to write an email from a detention facility. Some of the poems are funny, some are sad, they're all different. I can confidently say you've never tried anything like this before.

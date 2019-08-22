@@ -199,23 +199,14 @@ Mousetrap.bind('6', function() {
 	beat.volume = 0.8;
 	playSound(beat.id);
 }) 
-Mousetrap.bind('7', function() {
-	pauseAll();
-	var beat = $('#beat7')[0];
-	beat.volume = 0.8;
-	playSound(beat.id);
-}) 
-Mousetrap.bind('8', function() {
-	pauseAll();
-	var beat = $('#beat8')[0];
-	beat.volume = 0.8;
-	playSound(beat.id);
+Mousetrap.bind('z', function() {
+	speakNspell("buy", "white")
+	showGif("money.gif")
 }) 
 Mousetrap.bind('9', function() {
-	pauseAll();
-	var beat = $('#beat9')[0];
-	beat.volume = 0.8;
-	playSound(beat.id);
+	spell("Martim", "white")
+	speak("Marteam")
+	showGif("ambition.gif")
 }) 
 
 Mousetrap.bind('0', function() {
@@ -242,7 +233,11 @@ function speakNspell(str, color="white") {
 	$('h1').css("color", color)
 }
 function speak(str){
-	meSpeak.speak(str, {speed:getRandomInt(50,350), pitch:getRandomInt(0,100), amplitude:600});
+	if(!sounds[str]){
+		console.log("adding")
+		sounds[str] = meSpeak.speak(str, {rawdata: "array"})
+	}
+	meSpeak.play(sounds[str]);
 }
 function spell(str, color){
 	color = typeof color !== 'undefined' ?  color : "white"

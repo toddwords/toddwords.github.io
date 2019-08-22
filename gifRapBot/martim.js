@@ -160,64 +160,16 @@ Mousetrap.bind('/', function() {
 })
 
 
-
-
-//This is where you play your beats
-
 Mousetrap.bind('1', function() {
-	pauseAll();
-	var beat = $('#beat1')[0];
-	beat.volume = 0.8;
-	playSound(beat.id);
+	speakNspell("buy", "white")
+	showGif("money.gif")
 }) 
 Mousetrap.bind('2', function() {
-		pauseAll();
-	var beat = $('#beat2')[0];
-	beat.volume = 0.8;
-	playSound(beat.id);
+	spell("Martim", "white")
+	speak("Marteam")
+	showGif("ambition.gif")
 }) 
-Mousetrap.bind('3', function() {
-	pauseAll();
-	var beat = $('#beat3')[0];
-	beat.volume = 0.8;
-	playSound(beat.id);
-}) 
-Mousetrap.bind('4', function() {
-	pauseAll();
-	var beat = $('#beat4')[0];
-	beat.volume = 0.8;
-	playSound(beat.id);
-}) 
-Mousetrap.bind('5', function() {
-	pauseAll();
-	var beat = $('#beat5')[0];
-	beat.volume = 1;
-	playSound(beat.id);
-}) 
-Mousetrap.bind('6', function() {
-	pauseAll();
-	var beat = $('#beat6')[0];
-	beat.volume = 0.8;
-	playSound(beat.id);
-}) 
-Mousetrap.bind('7', function() {
-	pauseAll();
-	var beat = $('#beat7')[0];
-	beat.volume = 0.8;
-	playSound(beat.id);
-}) 
-Mousetrap.bind('8', function() {
-	pauseAll();
-	var beat = $('#beat8')[0];
-	beat.volume = 0.8;
-	playSound(beat.id);
-}) 
-Mousetrap.bind('9', function() {
-	pauseAll();
-	var beat = $('#beat9')[0];
-	beat.volume = 0.8;
-	playSound(beat.id);
-}) 
+
 
 Mousetrap.bind('0', function() {
 	pauseAll();
@@ -278,42 +230,43 @@ var playSound = function(id) {
 }
 
 
+//in-browser editor
 
-$(document).ready(function() {
-	$('#butttn').click(function () {
-    var val = $('#editor_js').val();
-    console.log(val);
-    eval(val);
-})
-   $.ajax({
-   url : "main.js",
-   dataType: "text",
-   success : function (data) {
-       $("#editor_js").text(data);
-          }
-})
-})
+// $(document).ready(function() {
+// 	$('#butttn').click(function () {
+//     var val = $('#editor_js').val();
+//     console.log(val);
+//     eval(val);
+// })
+//    $.ajax({
+//    url : "beabrand.js",
+//    dataType: "text",
+//    success : function (data) {
+//        $("#editor_js").text(data);
+//           }
+// })
+// })
 
-Mousetrap.bind('shift+r', function () {
-    var val = $('#editor_js').val();
-    console.log(val);
-    eval(val);
-})
-Mousetrap.bindGlobal('shift+space', function () {
-    var val = $('#editor_js').val();
-    eval(val);
-    $('#editorDiv').fadeToggle();
-	$('#gifList').fadeToggle();
-    $('h1').text("");
-    $('html').focus();
-    return false;
-})
-Mousetrap.bind('shift+e', function() {
-	$('#editorDiv').fadeToggle();
-})
-Mousetrap.bind('shift+g', function() {
-	$('#gifList').fadeToggle();
-})
+// Mousetrap.bind('shift+r', function () {
+//     var val = $('#editor_js').val();
+//     console.log(val);
+//     eval(val);
+// })
+// Mousetrap.bindGlobal('shift+space', function () {
+//     var val = $('#editor_js').val();
+//     eval(val);
+//     $('#editorDiv').fadeToggle();
+// 	$('#gifList').fadeToggle();
+//     $('h1').text("");
+//     $('html').focus();
+//     return false;
+// })
+// Mousetrap.bind('shift+e', function() {
+// 	$('#editorDiv').fadeToggle();
+// })
+// Mousetrap.bind('shift+g', function() {
+// 	$('#gifList').fadeToggle();
+// })
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
