@@ -1,8 +1,9 @@
-var names = ['Deni', 'Margaux', 'Zein', 'Victoria', 'Brea', 'Arcinello', 'Jo', 'Darren', 'Macy', 'Shannon', 'Nicole', 'Liam']
-var colors = ["green", "green", "green", "green", "blue", "blue", "blue", "blue", "orange", "orange", "orange", "orange"]
-colors = shuffle(colors);
+var names = ['Jasper (beimj)', 'Brian', 'Jo', 'Isabelle', 'Madison', 'Luke (ornil)', 'Evan', 'Danielle (gautd)', 'Alex (gesca)', 'Anastasiya', 'Olivija (liepo)', 'Alice (quina)', 'Lilah']
+var teamNames = ["Blue Barracudas", "Orange Iguanas", "Purple Parrots", "Silver Snakes"]
+names = shuffle(names);
 for (var i = 0; i < names.length; i++) {
-	console.log(names[i] + ": " + colors[i])
+	if(i % 3 == 0 && teamNames.length > 0){console.log("");console.log(teamNames.shift());console.log("---");console.log("")}
+  console.log(names[i])
 }
 
 function shuffle(array) {
