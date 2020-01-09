@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "__Project"
+title:  "&lowbar;&lowbar;Project"
 description: Explore a VR text world about the atomic bomb while you receive sexts on my cell phone which powers the headset 
 color: "0,130,113"
 img: writing3d1.PNG
