@@ -7,6 +7,6 @@ img: wordhackAnthology.gif
 categories: [wordhack, anthology]
 color: "34,212,166"
 author: todd
-xLink: https://dcw18.glitch.me
+xLink: https://toddwords.itch.io/wordhack-anthology
 evergreen: 1
 ---

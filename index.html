@@ -3,7 +3,7 @@ layout: default
 ---
 <style>
 html { 
-  background: url(https://img.itch.io/aW1hZ2UvMTAwNjgzLzQ3NDIwNS5naWY=/original/QWAAs%2B.gif) no-repeat center center fixed; 
+  background: url(images/bg.gif) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -52,10 +52,9 @@ html {
  <script src={{ "/js/imagesloaded.pkgd.min.js" | prepend: site.baseurl }}></script>
  <script>
     var $grid = $('.grid').masonry({ "itemSelector": ".grid-item", "percentPosition": true, "columnWidth": ".grid-sizer"});
-  setTimeout(function(){$('.grid').masonry('layout')},1500);
-// $grid.imagesLoaded().done( function() {
-//   $grid.masonry('layout');
-// });
+$grid.imagesLoaded().always( function() {
+  $grid.masonry('layout');
+});
   
 
 </script>
