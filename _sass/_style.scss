@@ -94,7 +94,10 @@ article {
     color: $text-color;
     padding: 1em 0;
 }
-
+article img {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
 .social-full h4, .social-full fa  {
     display: inline-block;
 }
