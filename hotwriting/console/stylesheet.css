@@ -1,0 +1,71 @@
+/*@font-face {
+    font-family: 'computer_pixel';
+    src: url('computer_pixel-7.woff2') format('woff2'),
+         url('computer_pixel-7.woff') format('woff'),
+         url('computer_pixel-7.ttf') format('truetype'),
+         url('computer_pixel-7.svg#computer_pixel-7regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+
+#tubular-container{
+  display:none;
+}
+#colorOptions{
+  display:none;
+  background-color: rgba(255,255,255,0.3);
+}
+html { 
+  font-family: 'Tresbuchet MS', Arial, sans-serif;
+  background: url("") no-repeat center center fixed; 
+  background-color: #333;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: green;
+  text-shadow: 2px 2px #020;
+  overflow:hidden;
+}
+body{
+  margin:0;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h4 {
+  font-size: 2.87em;
+  width: 85%;
+}
+
+p {
+  font-size: 1.5em;
+}
+#textEnter {
+  background-color: transparent;
+  color: green;
+  text-shadow: 3px 3px #000;
+  font-family: "Tresbuchet MS", Arial, sans-serif;
+  /*font-size: 2.87em;*/
+  font-size: 6em;
+  margin-left: 7.5%;
+  margin-top: 2%;
+  border: none;
+  width: 85%;
+  height: 88%;
+   border: none;
+    overflow: hidden;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+}
+
+#replaceTexts textarea {
+  width: 25em;
+  height: 4em;
+}

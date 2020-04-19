@@ -1,0 +1,14 @@
+{
+  "name": "Hotwriting",
+  "version": "1.4.2",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "rebuild": "electron-rebuild -f -w ."
+
+  },
+  "devDependencies": {
+    "electron": "^1.4.2",
+    "electron-rebuild": "^1.7.3"
+  }
+}
