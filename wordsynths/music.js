@@ -150,6 +150,9 @@ function changeBGColor(color){
   setTimeout(function(){ that.selectionStart = that.selectionEnd = 10000; }, 0);
 });
 function keyPressed(){
+	if(!currLoop){
+		playBasic(loopSpeed)
+	}
 	getAudioContext().resume();
 	if(keyCode == UP_ARROW){
 		if(currInput > 0){currInput--}
@@ -242,7 +245,5 @@ function changeADSR(amt){
 }
 
 function mouseClicked(){
-	if(!currLoop){
-		playBasic(loopSpeed)
-	}
+
 }
