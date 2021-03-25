@@ -9,16 +9,14 @@ var pitchSets= {
 }
 var restString = ''
 var currInput = 0
-var kite1 = new p5.Part();
-var umb1 = new p5.Part();
-var el1 = new p5.Part();
-var c1 = new p5.Part();
+// var kite1 = new p5.Part();
+// var umb1 = new p5.Part();
+// var el1 = new p5.Part();
+// var c1 = new p5.Part();
 var currPitchSet = pitchSets.pitchSet1;
-var mid = new Synth();
-var lead = new Synth();
-var bass = new Synth();
+let mid,lead,bass,reverb;
+
 var currLoop;
-var reverb = new p5.Reverb()
 var revLength = 6;
 var revAmt = 1.5;
 var reverbOn = false;
@@ -26,28 +24,19 @@ var loopSpeed = 200
 var bassADSR = [0.2,0.5,0.6,1.0]
 var ADSR = [0.05,0.2,0.2,0.5]
 function setup(){
-	// mid['kite1'] = [1,0,2,4,5,1,0,1]
-	// lead['kite1'] = [7,0,8,9,5,0,11,12,8]
-	// bass['kite1'] =  [1,0,0,0,2,0,0,3,0,0,1,0,0,0,2,0,4,0,0,0];
+	mid = new Synth();
+	lead = new Synth();
+	bass = new Synth();
 	mid.output = '#midText'
 	lead.output = '#leadText'
-	// kite1.setloopSpeed(60)
- //    umb1.setloopSpeed(100)
- //    el1.setloopSpeed(45)
- //    c1.setloopSpeed(60)
+
 	bass.env.setADSR(0.2,0.5,0.6,1.0)
 	bass.octave = 0.5
 	lead.octave = 2
-	// bass['umb1'] = [3,1,3,1,3,1,3,1,4,1,4,1,4,1,4,1,5,1,1,0,1,0,1,0,5,1,1,0,1,0,1,0]
-	// lead['umb1'] = [0,0,0,0,0,0,0,0,0,0,0,6,0,8,9,11,9,0,0,8,9,11,9,0,0,0,0,0,0,0,0,0,0,0]
-	// mid['umb1'] = [0,3,0,3,0,3,3,3,0,4,0,4,0,4,4,4,0,5,0,5,0,5,5,5]
-	// bass['el1'] = [1,0,2,0,3,0,6,0]
-	// lead.createPhrase(el1, [0,0,10,0,0,10,10,0,0,0,0,0,6,10,11,0,0,10,0,0,0,10])
-	// mid['el1'] = [0]
-	// mid['el1'] = [6,0,0,0,0,0,0,0,6,0,0,0,0,0,0,6]
-	// lead['el1'] = [0]
 
-	playBasic(loopSpeed)
+
+	reverb = new p5.Reverb()
+
 }
 
 
@@ -250,4 +239,10 @@ function changeADSR(amt){
 	bass.env.setADSR(bassADSR[0],bassADSR[1],bassADSR[2],bassADSR[3])
 	mid.env.setADSR(ADSR[0],ADSR[1],ADSR[2],ADSR[3])
 	lead.env.setADSR(ADSR[0],ADSR[1],ADSR[2],ADSR[3])
+}
+
+function mouseClicked(){
+	if(!currLoop){
+		playBasic(loopSpeed)
+	}
 }
