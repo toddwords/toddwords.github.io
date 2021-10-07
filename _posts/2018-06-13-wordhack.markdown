@@ -10,9 +10,15 @@ author: todd
 
 I founded WordHack in the summer of 2014 to create a communal space where people making language-based digital projects could share their work and meet each other. The format consists of 3-4 presenters giving short talks / performances (~15 mins) and an **Open Projector** where anyone from the audience can sign up to present their work for 5 minutes or less.
 
-WordHack happens in NYC on the third thursday of every month at [Babycastles](http://babycastles.com) (145 W 14th St). I have been hosting and curating the series since July of 2014.
+WordHack happens in NYC on the third thursday of every month at [Babycastles](http://babycastles.com) (147 W 14th St), and online at [twitch.tv/babycastles](https://twitch.tv/babycastles) during the pandemic. I have been hosting and curating the series since July of 2014.
 
 PAST WORDHACKS
+- [8/19/21 WordHack Online feat. Andy Simionato & Karen Ann Donnachie, Noa Chazan and Sam Von Ehren](https://withfriends.co/event/12411747/wordhack_online_feat_andy_simionato_and_karen_ann_donnachie_noa_chazan_and_sam_von_ehren)
+- [7/15/21 WordHack Online 777: 7 talks, 7 minutes, 7 years feat. Neta Bomani, Natalie Braginsky, Jamie Brew, Samantha Gorman, Joanne McNeil, Fernando Ramallo and Daniel Temkin](https://withfriends.co/event/12108903/wordhack_online_777_7_talks_7_minutes_7_years)
+- [6/17/21 WordHack Online w/ Nat Mesnard, Edith Viau and Murilo Polese](https://withfriends.co/event/11332891/wordhack_online_w_nat_mesnard_edith_viau_and_murilo_polese)
+- [5/20/21 WordHack Online w/ Jörg Piringer, Esther Alter, Pamela Mishkin & Jan Diehm](https://withfriends.co/event/10741660/wordhack_online_w_jrg_piringer_esther_alter_pamela_mishkin_and_jan_diehm)
+- [3/18/21 WordHack Online w/ Nick Montfort, Angie Waller and Alan Sondheim](https://withfriends.co/event/9815928/wordhack_online_w_nick_montfort_angie_waller_and_alan_sondheim)
+- [2/18/21 WordHack Online feat. Golan Levin & Tega Brain, Kelli Anderson and Artemio Morales](https://withfriends.co/event/9476063/wordhack_online_feat_golan_levin_and_tega_brain_kelli_anderson_and_artemio_morales)
 - [12/17/20 WordHack Online w/ James Ryan, Olivia Jack and Shannon Finnegan](https://withfriends.co/event/7728443/wordhack_online_w_james_ryan_olivia_jack_and_shannon_finnegan)
 - [11/19/20 WordHack Online Feat. Mindy Seu, Clarissa Littler and Cowboy Elijah](https://withfriends.co/event/5525476/wordhack_online_feat_mindy_seu_clarissa_littler_and_cowboy_elijah)
 - [10/15/20 WordHack Online Feat. Xin Xin, Em Lazer-Walker and Milan & Neilson Koerner Safrata](https://withfriends.co/event/5118707/wordhack_online_feat_xin_xin_em_lazer_walker_and_milan_and_neilson_koerner_safrata)
