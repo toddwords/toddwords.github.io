@@ -6,7 +6,7 @@ date:   2015-08-13 10:51:47 +0530
 img: inmydreams.gif
 categories: interactive
 color: "229,39,9"
-xLink: http://hotwriting.net/inmydreams
+xLink: "/inmydreams"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
