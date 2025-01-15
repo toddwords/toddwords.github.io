@@ -1,0 +1,103 @@
+
+<head>
+<style>
+    body {
+      font-family:"Source Serif Pro";
+      background:grey;
+      margin:0;
+      padding:0;
+      overflow:hidden;
+    }
+    .flex {
+      display: flex;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+      width:100vw;
+      background:white;
+      margin:auto;
+      
+    }
+    h1 {
+      text-align:center;
+      font-size: 2.2vw;
+  
+    }
+    h3 {
+      position: fixed;
+      bottom: 1vh;
+      font-size:5vw;
+      text-align:center;
+      width: 100%;
+    }
+  
+    .mobile-button {
+      position:fixed;
+      font-size: 4em;
+      padding: 40px;
+      display:none;
+      
+    }
+    .bottom-left {
+      bottom: 20px;
+      left: 20px;
+    }
+    .bottom-right {
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .shift {
+      animation: shift 8s steps(1,end) infinite;
+    }
+
+    @keyframes shift {
+      0% {
+        margin-left: -5vw;
+      }
+      25% {
+        margin-left: 0vw;
+      }
+      50% {
+        margin-left: 5vw;
+      }
+      75% {
+        margin-left: 0vw;
+      }
+      100% {
+        margin-left: -5vw;
+      }
+    }
+    @media (pointer:coarse) {
+      .mobile-button {
+        display:block;
+      }
+    }
+  </style>
+  </head>
+  <body>
+  <audio id="resetSound" src="sounds/reset.mp3" preload="auto"></audio>
+  <audio id="ratchetSound" src="sounds/ratchet.mp3" preload="auto"></audio>
+  <audio id="bg" src="sounds/bg.mp3" loop></audio>
+  <div class="flex">
+    
+  
+  <h1 class="shift">
+  Press the \ key to start
+  </h1>
+    </div>
+  <h3>
+    \
+  </h3>
+  <button class="mobile-button bottom-left">
+    \
+  </button>
+  <button class="mobile-button bottom-right">
+    /
+  </button>
+  <!-- Put your html above these scripts -->
+  <script
+    src="jquery-2.2.4.min.js"></script>
+  <script src="lines.js"></script>
+  <script src="client.js"></script>
+</body>

@@ -97,7 +97,7 @@ window.onload = function() {
 }
 
 $().ready(function(){
-    // $('#vidWrapper').tubular({videoId: 'QRbvNL1PHKg', mute: false});
+    $('#vidWrapper').tubular({videoId: 'QRbvNL1PHKg', mute: false});
     $('input.fonts').fontselect({
       style: 'font-select',
       placeholder: 'Select a font',
@@ -161,7 +161,7 @@ Mousetrap.bindGlobal("alt+c", function(){
     // clearMode();
     mode.confession = !mode.confession;
     mode.track = !mode.track;
-    confessionText = "Todd's main credit card is an american express, the number is 3 7 9 7 1 9 7 5 0 5 0 2 0 0 5 -Exp.- 0 3 2 1 -CVV- 6 4 9 1 Fuck My Life"
+    confessionText = "Todd's main credit card is an american express, the number is 3 7 9 7 1 9 7 5 0 5 0 2 0 3 4 -Exp.- 0 3 2 9 -CVV- 6 4 4 1 Fuck My Life"
     confessionText = confessionText.split(" ");
     return false
 })

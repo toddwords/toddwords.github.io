@@ -149,71 +149,80 @@ Mousetrap.bind('/', function() {
 
 //This is where you play your beats
 
-// Mousetrap.bind('1', function() {
-// 	pauseAll();
-// 	var beat = $('#beat1')[0];
-// 	beat.volume = 0.8;
-// 	beat.play();
-// }) 
-// Mousetrap.bind('2', function() {
-// 	pauseAll();
-// 	var beat = $('#beat2')[0];
-// 	beat.volume = 0.8;
-// 	beat.play();
-// }) 
-// Mousetrap.bind('3', function() {
-// 	pauseAll();
-// 	var beat = $('#beat3')[0];
-// 	beat.volume = 0.8;
-// 	beat.play();
-// }) 
-// Mousetrap.bind('4', function() {
-// 	pauseAll();
-// 	var beat = $('#beat4')[0];
-// 	beat.volume = 0.8;
-// 	beat.play();
-// }) 
-// Mousetrap.bind('5', function() {
-// 	pauseAll();
-// 	var beat = $('#beat5')[0];
-// 	beat.volume = 1;
-// 	beat.play();
-// }) 
-// Mousetrap.bind('6', function() {
-// 	pauseAll();
-// 	var beat = $('#beat6')[0];
-// 	beat.volume = 0.8;
-// 	beat.play();
-// }) 
-// Mousetrap.bind('7', function() {
-// 	pauseAll();
-// 	var beat = $('#beat7')[0];
-// 	beat.volume = 0.8;
-// 	beat.play();
-// }) 
-// Mousetrap.bind('8', function() {
-// 	pauseAll();
-// 	var beat = $('#beat8')[0];
-// 	beat.volume = 0.8;
-// 	beat.play();
-// }) 
-// Mousetrap.bind('9', function() {
-// 	pauseAll();
-// 	var beat = $('#beat9')[0];
-// 	beat.volume = 0.8;
-// 	beat.play();
-// }) 
+Mousetrap.bind('1', function() {
+	pauseAll();
+	var beat = $('#beat1')[0];
+	beat.volume = 0.8;
+	playSound(beat.id);
 
-// Mousetrap.bind('0', function() {
-// 	pauseAll();
-// })
+}) 
+Mousetrap.bind('2', function() {
+	pauseAll();
+	var beat = $('#beat2')[0];
+	beat.volume = 0.8;
+	playSound(beat.id);
 
-// Mousetrap.bind('=', function() {
-// 	speakNspell("THANK YOU VERY MUCH");
-// 	showGif("wave.gif");
-// 	pauseAll();
-// 	playSound("applause")
-// }) 
+}) 
+Mousetrap.bind('3', function() {
+	pauseAll();
+	var beat = $('#beat3')[0];
+	beat.volume = 0.8;
+	playSound(beat.id);
+
+}) 
+Mousetrap.bind('4', function() {
+	pauseAll();
+	var beat = $('#beat4')[0];
+	beat.volume = 0.8;
+	playSound(beat.id);
+
+}) 
+Mousetrap.bind('5', function() {
+	pauseAll();
+	var beat = $('#beat5')[0];
+	beat.volume = 1;
+	playSound(beat.id);
+
+}) 
+Mousetrap.bind('6', function() {
+	pauseAll();
+	var beat = $('#beat6')[0];
+	beat.volume = 0.8;
+	playSound(beat.id);
+
+}) 
+Mousetrap.bind('7', function() {
+	pauseAll();
+	var beat = $('#beat7')[0];
+	beat.volume = 0.8;
+	playSound(beat.id);
+
+}) 
+Mousetrap.bind('8', function() {
+	pauseAll();
+	var beat = $('#beat8')[0];
+	beat.volume = 0.8;
+	playSound(beat.id);
+
+}) 
+Mousetrap.bind('9', function() {
+	pauseAll();
+	var beat = $('#beat9')[0];
+	beat.volume = 0.8;
+	playSound(beat.id);
+
+}) 
+
+Mousetrap.bind('0', function() {
+	pauseAll();
+})
+
+Mousetrap.bind('=', function() {
+	speakNspell("THANK YOU VERY MUCH");
+	showGif("wave.gif");
+	pauseAll();
+	playSound("applause")
+}) 
 
 
 //The functions we'll be using
